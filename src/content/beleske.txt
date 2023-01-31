@@ -1,0 +1,80 @@
+PORTFOLIO BELESKE
+      -Ako ne stavim za AppBar position='relativ necu videti elemente jer ce se nalaziti IZA AppBar.Mogu i ovde position sticky i dodam top:0
+      -Ako ne stavim CssBaseline cela strana ce biti uokvirena belom marginom(testitraj ako treba).
+      -U komponenti Sidebar kada sam u css fajlu definisao position sticky,nije htelo pa sam morao inline styling (sx) i obavezno da se definise bar jedna pozicija(npr top:'0')
+      -Ako zelim da definisem hover u sx onda ide sx{{'&:hover':{color:'red'}}}
+      -Sve boje sam ubacio u theme.palette.myCollors,theme provider sam definisao u index js zato ce da primeni ovu temu na sve komponente.
+      -import styled ...const noviStajl=styled(Button)(({theme})=>({color:theme.palette.myColors.white})) ili bez teme =styled(Button)({color:'red'})
+      -Sliku sam ubacio u AVATAR tako sto sam importovao sliku (import profile from '../../assets/profile.jpg') i onda sam u src={profile}
+      -Da prikazem u konzoli koja mi je VISINA PRI SKROLOVANJU,napravim funkciju const changeHeight=()=>{ console.log(window.scrollY)} i zatim window.addEventListener('scroll',changeHeight)
+      -Promena booje textfielda.Posto nisam znao kako da uticem na borderCOlor when focus,treba samo da upisam color:primary.Jedini nacin da ubacim svoju boju je u pallete.myCOlors definisem main i onda kad stavim color='myColors' bice mi main boja po default-u
+      -React Scroll -instalio ga u ract i importovao link from react-scroll zatim napravio componentu
+            u istoj componenti sam stavio activeClass={sxStyles.active}
+      -Promena boje custom fona.pomocu create theme,morao sam da ubacim u AllVariatns inace ne prihvata nikakve promene{proveri u App.js}
+
+
+PHOTOS BELESKE
+      -Router dugmad,da bi svaki aktivni router bio oznacen bojom koristio sam ISACTIVE  prop od NavLink.
+      -Album Images da bih mogao da ubacim sve slike bez importa,samo je dovoljno da ih sacuvam u public folder i onda src="images/ovcar.jpg"
+      -USE PARAMS:
+            -Kako kada kliknem na odredjenu sliku ona mi otvori posebni router sa informacijama te slike.Kako sam to izveo?
+                  1.prvo ispod api router,napravio sam novi router gde sam kao elemnt stavio tu novu comp,a path='/api/:id'
+                  2.sada cu u novoj komponenti napraviti const {id}=useParams()
+                  3.ubacicu u novu komponentu photosData i napravicu novu let data=photosData[id]
+                  4.na mestu gde mi se nalaze sve slike stavicu iz routera Link gde cu staviti to={style={{ textDecoration: "none" }} to={`/api/${item.id}`}}
+                  5.Kada sve ovo uradim sve ce biti ok sem jednog velikog problema,nece se prikazati slika.Ne znam zasto al znam da bih je video i Index.html u head element dodacu <base href="/" /> i slike ce raditi savrseno!
+      -Axios -ne moram da pravim async func,ne moram await,ne moram .json() ,vec samo:
+            1.Importujem axios
+            2.axios.get( 'localhost500...').then(res=>setData(res.data))
+
+      -Kako sam stavio PhotosData.json U VISE STRANICA?
+            -Json sam po sebi ima opciju da podeli stranice "http://localhost:5000/photos?_page=1&_limit=8`" gde &_limit=8 znaci osam clanova po strani
+            -sa useStateom cu fetchovati ovaj json u objekat.
+            -Umesto page=1,sam stavio sve `page=${num}` ,num mi je uz use state i take ce se menjati strana u zavisnosti od num
+
+      -Povezivanje pagination stranica sa [num,setNUm]=useState(1)
+            -onChange={(e,p)=> setNum(p)}  -sto znaci na svaki klik promeni mi num 
+            -defaultPage={num}   -default page uvek ide u { } zagradi.
+
+      -Dovoljno je bilo da definisem hidePagination u app kako bi mi photoDetail prepoznao da je true ili false (Kada sam je definisanio u photos "nije htjela").
+
+
+GAME BELESKE
+      -Pomocu niza 8 razlicitih boja napravicu niz od 64 clana (pomocu for loop).
+      -Sada zelim da sacuvam taj niz pomocu useState,a da se ne bi funkcija pokretala neprestano,sacuvacu je samo pri otvaranju strane, pomocu useEffect.
+      -Sve funkcije koje proveravaju iste ikone i prazna polja sam stavio u set interval .Ako ne stavim clear set interval ,umesto da proverava na 0.10 sec kako sam mu zadao,proveravace neprestano mnogo.
+      -Sada imam niz i zelim da pomocu map za svaki clan niza napravim img sa props uzetim iz niza.(backgroundColor)
+      -Sada pravim funkciju za prepoznavanje tri iste boje po koloni.A ovako radi: za trenutni lup (npr i=1) napravi niz od 3 clana[i,i+1,i+2].
+            Ako su mi sva tri clana ista kao prvi(ako je .every() true) onda ce za svaki clan od ta 3 da bude prazno polje(forEach)
+            Po istom sistemu napravim i ostale provere,stim kad radim red,moram da iskljucim poslednje 2 kolone sa desne strane(includes)
+      -Nakon ovoga potrebno je da mi for loop prebaci svaki prazan clan na gore,a zatim ponovo napravi random boje za prvi red prazni.
+      -Sada u img stavljam draggable={true} i sad podesavam onDragStart,onDrop,onDragEnd.Kada sam podesio da kockice menjaju boje.
+      -Sada ogranicavam gde mogu da se zamene slike i da mora da bude ispunjen red da bi se prihvatila zamena
+            Stavljam za svaku proveru reda i kolona ako mi je ispunjen uslov i ubace se prazna polja, "return true".
+      -Stavljam i !isBlank uslov da me ne sabiralo poene i za prazna polja
+      -Prebacio sam funkcije u poseban folder,zbog strukture.Fora je da funkcije u folderu napravim sa argumentima,kako ne bih imao problema zbog nedefinisanih stvari(states,functions..)
+      -Ternary if condition u style={{}} :   height: width<720 ? '100px' : width<560 ? '75px' : '50px'
+
+
+
+
+
+PLAN DALJI: 
+      -Prodji kod i uprosti,kao i beleske(za Game).
+      -Git,github
+      -onTouch prepoznaje(console.log) ali ne dira ikonice,pitati Ugljesu za savet.
+      -Isto ima bag kad hajlajtuje sidebar klikom na mis,proveri.
+    
+ 
+
+
+
+
+STA SAM KORISTIO?
+      -Material UI i Material UI Icons
+      -veryicon.com
+      -Emailjs koji se nalazi u home/contact
+      -ReactScroll
+      -React Router
+      -npm Json server 
+ 
