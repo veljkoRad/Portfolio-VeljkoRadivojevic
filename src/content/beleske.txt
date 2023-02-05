@@ -54,27 +54,45 @@ GAME BELESKE
       -Stavljam i !isBlank uslov da me ne sabiralo poene i za prazna polja
       -Prebacio sam funkcije u poseban folder,zbog strukture.Fora je da funkcije u folderu napravim sa argumentima,kako ne bih imao problema zbog nedefinisanih stvari(states,functions..)
       -Ternary if condition u style={{}} :   height: width<720 ? '100px' : width<560 ? '75px' : '50px'
-
-
-
-
+      Konektovanje mobilnog sa kompom.
+      -U mobilnom odem u settings about fon,nadjem "Build number" i klikcem dosta puta dok se ne pojavi dev folder.
+      -kada konektujem mobilni u komp sa usb kablom, u mobilnom u settings /System&Updates/Developer options i ukljucim USB debugging.Moram da ostanem u tom folderu da se ne bi iskljucilo automatski.
+      -u terminal u vsCode kucam ipconfig,kopiram ipv4 adress,umesto localhost:300,kopiram : '192.168.1.9:3000' i sada kada je fon povezan usb-om na komp,kopiram ovu adresu i mogu preko mobilnom.
+      
 
 PLAN DALJI: 
-      -Prodji kod i uprosti,kao i beleske(za Game).
-      -Git,github
-      -onTouch prepoznaje(console.log) ali ne dira ikonice,pitati Ugljesu za savet.
-      -Isto ima bag kad hajlajtuje sidebar klikom na mis,proveri.
-    
+      -Readame upisi:
+            Sta sam koristio.?
+                  -Material UI i Material UI Icons
+                  -veryicon.com
+                  -Emailjs koji se nalazi u home/contact
+                  -ReactScroll
+                  -React Router
+                  -npm Json server 
+                  -Axios
+            Kako se koristi  
+                  -npm run server ili ispod npm scripts dugme "server"
+      -Dizajn stranice:
+            -Resi visine slika da budu iste(u carMedia ima negde opcija kaze Ugljesa).
+            -Odgledaj clip,design pages colors,tako nesto.
+            -Uzmi fontove bolje,obrisi ovaj pisani,kao nemanja pantelic koristi.
+            -Neka boje stranica budu iste(ukinu background sliku i gradient).
+            -U paletama imas jednu main i par pomocnih(npr jedna boja oznacava da je to dugme itd..opet mozes Nemanju Pantelic da kopiras sa bojama lagano.)
+            -Promeni Navbar,al ne ko nemanja,uzmi iz material ui primer.      
+      Trazenje Posla:
+            Posaljem motivaciono,cv i link github profila.
+                  Napravi wordow Cv,slicno ko Nemanja Pantelic,al laganije slobodno.
+                  Napravi Linked in,izmeni kako treba za programera.
+                  Kontaktiraj Likusu koju ti je poslao Ugljesa.
+                  Kontaktiraj Losmijevu pomoc.
+                  Izmeni i trazi na  infsostudu ili slicnim stranicama posao kao React Programer i samo salji,iako pise iskusvo.
+      Usput uci jos o reactu, gledaj klipove i nadogradi cv ako treba.kad zavrsis sve ovo.
+
+
+
+Pitanja:
+-Sta da radim sa serverom da bude pristupacniji?
+
+
  
 
-
-
-
-STA SAM KORISTIO?
-      -Material UI i Material UI Icons
-      -veryicon.com
-      -Emailjs koji se nalazi u home/contact
-      -ReactScroll
-      -React Router
-      -npm Json server 
-      -Axios

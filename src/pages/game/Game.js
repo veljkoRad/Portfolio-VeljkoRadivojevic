@@ -58,17 +58,16 @@ const Game = ({ wiDth }) => {
   ]);
 
   const dragStart = (e) => {
-    // console.log("dragStart");
+    console.log(e.target.getAttribute("data-id"));
     setSquareBeingDragged(e.target);
   };
 
   const dragDrop = (e) => {
-    // console.log("drag drop");
+    console.log(e.target.getAttribute("data-id"));
     setSquareBeingReplaced(e.target);
   };
 
   const dragEnd = (e) => {
-    // console.log("drag end");
     const squareBeingDraggedId = parseInt(
       squareBeingDragged.getAttribute("data-id")
     );
@@ -148,6 +147,7 @@ const Game = ({ wiDth }) => {
           display: "flex",
           flexWrap: "wrap",
           margin: "0 auto 2rem auto",
+          touchAction: "none",
         }}
       >
         {currentColorArrangament.map((candyColor, index) => (
@@ -156,7 +156,7 @@ const Game = ({ wiDth }) => {
             src={candyColor}
             data-id={index}
             style={{
-              cursor: "pointer",
+              cursor: "auto",
               width:
                 wiDth > 615
                   ? "70px"
@@ -175,15 +175,15 @@ const Game = ({ wiDth }) => {
                   : "32px",
             }}
             draggable={true}
-            onDragStart={dragStart}
             onDragOver={(e) => e.preventDefault()}
             onDragEnter={(e) => e.preventDefault()}
             onDragLeave={(e) => e.preventDefault()}
+            onDragStart={dragStart}
             onDrop={dragDrop}
             onDragEnd={dragEnd}
-            onTouchStart={dragStart}
-            onTouchEndCapture={dragDrop}
-            onTouchEnd={dragEnd}
+            // onTouchStart={dragStart}
+            // onTouchMoveCapture={dragDrop}
+            // onTouchCancel={dragEnd}
             alt={candyColor}
           />
         ))}

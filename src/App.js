@@ -10,6 +10,7 @@ import { sidebarItems } from "./data/sidebarItems";
 import { sxStyles } from "./assets/styles";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DropMenu from "./components/DropMenu";
+
 function App() {
   const fontTheme = createTheme({
     typography: {
@@ -41,9 +42,8 @@ function App() {
     };
   }, []);
 
-  // console.log(num)
   return (
-    <BrowserRouter >
+    <BrowserRouter>
       <div>
         <CssBaseline />
         <Navbar
