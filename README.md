@@ -2,8 +2,8 @@ All photos from project are on npm Json server.To run that server type in termin
 
 Tools that I used for this project:
 -Material UI i Material UI Icons
--veryicon.com
--Emailjs koji se nalazi u home/contact
+-veryicon.com<br>
+-Emailjs -for email template
 -ReactScroll
 -React Router
 -npm Json server
