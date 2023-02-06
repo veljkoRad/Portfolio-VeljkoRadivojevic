@@ -1,4 +1,4 @@
-This project wade made with React.<br>
+This project was made with React.<br>
 All photos from project are on npm Json server.To run that server type in terminal npm run server,or in Vs Code under "npm scripts" run the "server" button.
 
 Tools that I used for this project:
