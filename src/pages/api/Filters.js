@@ -31,8 +31,12 @@ const Filters = ({ setPic, setHidePagination }) => {
       {allMountains.map((item, id) => (
         <Fab
           key={id}
-          sx={{ margin: "0.2rem" }}
-          color="myColors3"
+          sx={{
+            margin: "0.2rem",
+            boxShadow: "none",
+            border: "solid 2px #F6BE3B",
+          }}
+          color="myColors"
           variant="extended"
           size="small"
           onClick={() => {
@@ -43,7 +47,7 @@ const Filters = ({ setPic, setHidePagination }) => {
           <Typography
             variant="h4"
             color="myColors.white"
-            sx={{ fontSize: "90%" }}
+            sx={{ fontSize: "80%" }}
           >
             {" "}
             {item.name}{" "}

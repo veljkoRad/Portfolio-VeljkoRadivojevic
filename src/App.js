@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
@@ -14,9 +15,9 @@ import DropMenu from "./components/DropMenu";
 function App() {
   const fontTheme = createTheme({
     typography: {
-      fontFamily: ["Caveat", "cursive"].join(","),
+      fontFamily: ["Lato", "sans-serif"].join(","),
       allVariants: {
-        color: "#fff",
+        color: "#0092FF",
         fontSize: "1.5rem",
       },
     },
@@ -51,6 +52,7 @@ function App() {
           width={width}
           navBtn={navBtn}
           setNavBtn={setNavBtn}
+          theme={fontTheme}
         />
         {navBtn ? (
           <div

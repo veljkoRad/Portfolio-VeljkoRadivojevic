@@ -59,9 +59,10 @@ const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
                 justifyContent: "flex-end",
               }}
             >
-              <Typography color="myColors.white" sx={sxStyles.mailLink}>
+              <Typography sx={sxStyles.mailLink}>
                 radivojevicveljko@gmail.com
               </Typography>
+
               <div style={{ display: "flex", gap: "5px" }}>
                 <Link href="https://github.com/veljkoRad" target="_blank">
                   <GitHubIcon sx={sxStyles.linkIcons} />
@@ -88,14 +89,14 @@ const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
                 fullWidth
                 label="Your Name"
                 name="to_name"
-                color="myColors"
+                color="myColors3"
               />
               <TextField
                 type="email"
                 fullWidth
                 label="Your Email"
                 name="from_name"
-                color="myColors"
+                color="myColors3"
               />
             </Grid>
             <TextField
@@ -103,15 +104,18 @@ const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
               name="message"
               multiline
               rows={width < 376 ? 2 : 4}
-              color="myColors"
+              color="myColors3"
             />
 
-            <Button variant="contained" color="myColors">
+            <Button variant="outlined" color="myColors3">
               <Input
                 fullWidth
                 type="submit"
                 disableUnderline
-                sx={{ color: "myColors.white", fontWeight: "bold" }}
+                sx={{
+                  color: "myColors.third",
+                  fontWeight: "bold",
+                }}
               />
             </Button>
           </Grid>

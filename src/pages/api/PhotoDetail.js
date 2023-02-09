@@ -19,7 +19,7 @@ const PhotoDetail = ({ pic, width }) => {
   return (
     <div
       style={{
-        backgroundImage: `url(${tremDrugi})`,
+        backgroundColor: `#0A192F`,
       }}
     >
       <Link to={-1}>
@@ -43,24 +43,36 @@ const PhotoDetail = ({ pic, width }) => {
           <img src={data.image} style={apiStyles.cardPhoto} alt="" />
         </div>
         <div style={{ textAlign: "center" }}>
-          <Typography variant="h4" color="myColors.blue">
+          <Typography variant="h4" color="myColors.secondary">
             "{data.name}"
           </Typography>
-          <Typography>
+          <Typography color="myColors.white">
             Mountain:{" "}
-            <Typography component="span" variant="h6" color="myColors.blue">
+            <Typography
+              component="span"
+              variant="h6"
+              color="myColors.secondary"
+            >
               {data.mountain}
             </Typography>
           </Typography>
-          <Typography>
+          <Typography color="myColors.white">
             Location:
-            <Typography component="span" variant="h6" color="myColors.blue">
+            <Typography
+              component="span"
+              variant="h6"
+              color="myColors.secondary"
+            >
               {data.location}
             </Typography>
           </Typography>
-          <Typography>
+          <Typography color="myColors.white">
             Highest Point:
-            <Typography component="span" variant="h6" color="myColors.blue">
+            <Typography
+              component="span"
+              variant="h6"
+              color="myColors.secondary"
+            >
               {data.highestPoint}
             </Typography>
           </Typography>

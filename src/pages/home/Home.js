@@ -17,8 +17,7 @@ const Home = ({ sidebarItems, sxStyles, fontTheme, width }) => {
   return (
     <div
       style={{
-        background: "linear-gradient(to right, #000046, #1cb5e0)",
-        // paddingBottom: "50px",
+        backgroundColor: "#0A192F",
       }}
     >
       <Grid container spacing={0}>
@@ -33,6 +32,7 @@ const Home = ({ sidebarItems, sxStyles, fontTheme, width }) => {
               sidebarItems={sidebarItems}
               sxStyles={sxStyles}
               fontTheme={fontTheme}
+              width={width}
             />
             <Education
               sidebarItems={sidebarItems}
@@ -44,6 +44,7 @@ const Home = ({ sidebarItems, sxStyles, fontTheme, width }) => {
               sidebarItems={sidebarItems}
               sxStyles={sxStyles}
               width={width}
+              theme={fontTheme}
             />
             <Contact
               sidebarItems={sidebarItems}

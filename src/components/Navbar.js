@@ -1,6 +1,7 @@
 import {
   AppBar,
   Button,
+  ThemeProvider,
   Toolbar,
   Typography,
   Breadcrumbs,
@@ -8,13 +9,15 @@ import {
 import { NavLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 
-const Navbar = ({ sxStyles, width, navBtn, setNavBtn }) => {
+const Navbar = ({ sxStyles, width, navBtn, setNavBtn, theme }) => {
   return (
-    <AppBar sx={{ backgroundColor: "rgba(0,0,70)" }} position="relative">
+    <AppBar sx={{ backgroundColor: "myColors.main" }} position="relative">
       <Toolbar>
-        <Typography variant="h6" sx={{ color: "myColors.main" }}>
-          Veljko Radivojevic
-        </Typography>
+        <ThemeProvider theme={theme}>
+          <Typography variant="h6" sx={{ color: "myColors.secondary" }}>
+            Veljko Radivojevic
+          </Typography>
+        </ThemeProvider>
         {width < 600 ? (
           <Button
             sx={{ marginLeft: "auto" }}
@@ -22,10 +25,10 @@ const Navbar = ({ sxStyles, width, navBtn, setNavBtn }) => {
               setNavBtn(!navBtn);
             }}
           >
-            <MenuIcon />
+            <MenuIcon sx={{ color: "myColors.secondary" }} />
           </Button>
         ) : (
-          <Breadcrumbs sx={sxStyles.routerItems}>
+          <Breadcrumbs separator="" sx={sxStyles.routerItems}>
             <NavLink
               to="/"
               style={({ isActive }) => {
@@ -34,8 +37,9 @@ const Navbar = ({ sxStyles, width, navBtn, setNavBtn }) => {
                   : sxStyles.routerItem;
               }}
             >
-              Home
+              <Typography sx={{ fontSize: "1rem" }}>Home</Typography>
             </NavLink>
+
             <NavLink
               to="/api"
               style={({ isActive }) => {
@@ -44,7 +48,7 @@ const Navbar = ({ sxStyles, width, navBtn, setNavBtn }) => {
                   : sxStyles.routerItem;
               }}
             >
-              Album
+              <Typography sx={{ fontSize: "1rem" }}>Album</Typography>
             </NavLink>
             <NavLink
               to="/game"
@@ -54,7 +58,7 @@ const Navbar = ({ sxStyles, width, navBtn, setNavBtn }) => {
                   : sxStyles.routerItem;
               }}
             >
-              Game
+              <Typography sx={{ fontSize: "1rem" }}>Game</Typography>
             </NavLink>
           </Breadcrumbs>
         )}

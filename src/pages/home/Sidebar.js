@@ -29,7 +29,7 @@ const Sidebar = ({ sidebarItems, sxStyles }) => {
                 </ListItemIcon>
                 <ListItemText
                   primary={item.name}
-                  sx={{ color: "myColors.white" }}
+                  sx={{ color: "myColors.secondary" }}
                 />
               </ListItemButton>
             </Link>

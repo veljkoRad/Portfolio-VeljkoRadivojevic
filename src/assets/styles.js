@@ -1,22 +1,23 @@
+import { ThemeProvider } from "@mui/material";
 export const sxStyles = {
   //Navbar start
   routerItems: {
     marginLeft: "auto",
     marginRight: "2rem",
-    color: "#fff",
+    color: "#F1F1E6",
   },
   routerItem: {
-    color: "#fff",
+    color: "#0092FF",
     textDecoration: "none",
-    fontSize: "1.3rem",
+    fontSize: "1.4rem",
   },
   routerItemActive: {
-    color: "#1cb5e0",
-    fontSize: "1.2rem",
+    color: "#F6BE3B",
+    fontSize: "1.4rem",
     textDecoration: "none",
   },
   responsiveRouter: {
-    color: "#fff",
+    color: "#0092FF",
     textDecoration: "none",
     fontSize: "1.5rem",
     fontWeight: "bold",
@@ -25,7 +26,7 @@ export const sxStyles = {
     },
   },
   responsiveRouterActive: {
-    color: "#1cb5e0",
+    color: "#F6BE3B",
     textDecoration: "none",
     fontSize: "1.5rem",
     fontWeight: "bold",
@@ -67,11 +68,11 @@ export const sxStyles = {
     alignItems: "center",
   },
   sidebarIcons: {
-    color: "myColors.white",
+    color: "myColors.secondary",
     justifyContent: "center",
   },
   active: {
-    borderBottom: "3px solid #fff",
+    borderBottom: "3px solid #F6BE3B",
   },
   //Sidebar Component end
 
@@ -81,21 +82,20 @@ export const sxStyles = {
     paddingRight: "0.5rem",
     maxWidth: 500,
     width: "100%",
-    height: "80vh",
+    height: "100%",
     display: "flex",
     flexWrap: "wrap",
     flexDirection: "column",
     justifyContent: "space-evenly",
-    borderRadius: "20px",
-    backgroundColor: "rgba(28,181,224,0.5)",
-    "&:hover": { boxShadow: "10px 10px 20px #9ec6b8" },
+    boxShadow: "none",
+    backgroundColor: "inherit",
   },
   profilePic: {
-    width: 180,
-    height: 180,
-    marginRight: "40px",
+    width: 170,
+    height: 170,
+    marginRight: "20%",
     marginLeft: "auto",
-    "&:hover": { border: "2px solid #fff" },
+    border: "2px solid #F6BE3B",
   },
   //  About Component end
 
@@ -110,8 +110,10 @@ export const sxStyles = {
     color: "myColors.white",
   },
   divColored: {
-    backgroundColor: "rgba(28,181,224, 0.2)",
+    backgroundColor: "inherit",
+    color: "#F1F1E6",
     borderRadius: "20px",
+    border: "solid 1px #F6BE3B",
     padding: "10px 10px 10px 15px",
   },
   //Education Component end
@@ -128,8 +130,13 @@ export const sxStyles = {
     justifyContent: "center",
     alignItems: "center",
     borderRadius: "20px",
-    backgroundColor: "rgba(0,0,70,0.5)",
-    "&:hover": { boxShadow: "10px 10px 20px #9ec6b8" },
+    backgroundColor: "inherit",
+    boxShadow: "none",
+  },
+  avatarProp: {
+    backgroundColor: "#F1F1E6",
+    width: 55,
+    height: 55,
   },
   experienceComp: {
     color: "#131313",
@@ -143,24 +150,13 @@ export const sxStyles = {
     padding: "10px 10px 10px 15px",
   },
   languageInfo: {
-    fontSize: "0.7rem",
-    fontWeight: "bold",
+    paddingTop: "6px",
+    color: "#0092FF",
   },
   iconsDiv: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-  },
-  iconsRow: {
-    display: "flex",
-    justifyContent: "space-evenly",
-  },
-  wholeRow: {
-    display: "flex",
-    flexDirection: "column",
-    marginBottom: "2rem",
-    gap: "0.5rem",
-    textAlign: "center",
   },
 
   //Experience Component end
@@ -177,13 +173,15 @@ export const sxStyles = {
     marginBottom: "-2.5rem",
   },
   linkIcons: {
-    color: "myColors.white",
+    color: "myColors.third",
     fontSize: "2rem",
     "&:hover": {
       color: "#9ec6b8",
     },
   },
   mailLink: {
+    fontSize: "1rem",
+    color: "#0092FF",
     "&:hover": {
       color: "#9ec6b8",
     },

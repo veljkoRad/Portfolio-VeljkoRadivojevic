@@ -11,9 +11,9 @@ const Photos = ({ apiStyles, pic, width }) => {
         <Grid item xs={8} md={3} key={item.id} sx={photoProp}>
           <Link style={{ textDecoration: "none" }} to={`/api/${item.id}`}>
             <Card sx={apiStyles.photoItem}>
-              <CardMedia component="img" height="100%" src={item.image} />
+              <CardMedia component="img" height="250px" src={item.image} />
               <CardContent sx={apiStyles.photoContent}>
-                <Typography align="center" gutterBottom>
+                <Typography align="center" color="myColors.white" gutterBottom>
                   <Typography
                     align="center"
                     component="span"
@@ -23,7 +23,7 @@ const Photos = ({ apiStyles, pic, width }) => {
                   </Typography>
                   {item.mountain}
                 </Typography>
-                <Typography align="center">
+                <Typography align="center" color="myColors.white">
                   <Typography
                     align="center"
                     component="span"

@@ -2,10 +2,7 @@ import trem from "./photos&images/trem.jpg";
 export const apiStyles = {
   main: {
     width: "100%",
-    backgroundImage: `url(${trem})`,
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
+    backgroundColor: "#0A192F",
     paddingBottom: "2rem",
   },
   firstContainer: {
@@ -18,8 +15,7 @@ export const apiStyles = {
     marginBottom: "2rem",
   },
   photoItem: {
-    backgroundColor: "rgba(0,0,70,0.7)",
-    border: "solid 2px #000046",
+    backgroundColor: "rgba(0,146,255,0.6)",
     borderRadius: "6px",
     "&:hover": { transform: " translate(0,-10px)" },
   },
@@ -41,7 +37,6 @@ export const apiStyles = {
     position: "relative",
   },
   cardPhoto: {
-    border: "solid 2px #000046",
     borderRadius: "6px",
     width: "80%",
   },

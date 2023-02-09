@@ -1,10 +1,11 @@
+import { SportsRugbySharp } from "@mui/icons-material";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-const DropMenu = ({ sxStyles, setNavBtn, navBtn }) => {
+const DropMenu = ({ sxStyles, setNavBtn }) => {
   const menuStyle = {
     padding: "2rem",
-    backgroundColor: "rgba(0,0,70,0.7)",
+    backgroundColor: "rgba(10,25,47,0.7)",
     height: "100%",
     width: "100vw",
     display: "flex",

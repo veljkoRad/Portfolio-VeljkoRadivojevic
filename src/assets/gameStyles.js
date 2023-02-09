@@ -10,15 +10,16 @@ export const gameStyles = {
     width: "130px",
     height: "70px",
     borderRadius: "15px",
-    backgroundColor: "#1cb5e0",
+    backgroundColor: "#0092FF",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    // justifyContent: "center",
+    justifyContent: "center",
     margin: "0 auto 0 auto",
   },
   scoreText: {
-    fontSize: "1.3rem",
-    margin: "1px",
+    fontSize: "1.4rem",
+
+    color: "#0A192F",
   },
 };

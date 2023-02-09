@@ -18,13 +18,18 @@ const Api = ({
     <div style={apiStyles.main}>
       <Container sx={apiStyles.firstContainer}>
         <Typography
+          color="myColors.secondary"
           align="center"
           variant={width < 380 ? "h3" : "h2"}
           gutterBottom
         >
           Mountains of Serbia
         </Typography>
-        <Typography variant={width < 380 ? "body1" : "h6"} align="center">
+        <Typography
+          variant={width < 380 ? "body1" : "h6"}
+          align="center"
+          color="myColors.secondary"
+        >
           This is presentation of my hobbie.All photos are created on my
           journeys, with my mobile camera.
         </Typography>
@@ -35,7 +40,7 @@ const Api = ({
             <Pagination
               size={width < 380 ? "small" : "medium"}
               count={11}
-              color="primary"
+              color="myColors2"
               siblingCount={0}
               boundaryCount={2}
               shape="rounded"

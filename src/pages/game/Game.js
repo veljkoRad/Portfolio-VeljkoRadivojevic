@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { CardMedia } from "@mui/material";
 import { gameStyles } from "../../assets/gameStyles";
 import ScoreBoard from "./ScoreBoard";
-import cloud from "../../assets/photos&images/clouds.png";
-import moon from "../../assets/photos&images/moon.png";
-import mountain from "../../assets/photos&images/mountains.png";
-import snow from "../../assets/photos&images/snowFlake.png";
-import sun from "../../assets/photos&images/sun.png";
-import tree from "../../assets/photos&images/tree.png";
+import cloud from "../../assets/photos&images/cloud.svg";
+import mountain from "../../assets/photos&images/mountains.svg";
+import sun from "../../assets/photos&images/sun.svg";
+import tree from "../../assets/photos&images/tree.svg";
+import moon from "../../assets/photos&images/moon.svg";
 import blank from "../../assets/photos&images/blank.png";
+import diamond from "../../assets/photos&images/diamond.svg";
+
 import {
   checkForRowOfThree,
   checkForRowOfFour,
@@ -17,16 +19,15 @@ import {
   createBoard,
 } from "../../functions/functionsGame";
 
-const candyColors = [cloud, moon, mountain, snow, sun, tree];
-
 const Game = ({ wiDth }) => {
+  const candyColors = [cloud, moon, sun, mountain, tree, diamond];
   const mainDiv = {
     display: "flex",
     justifyContent: "space-evenly",
     flexDirection: wiDth > 882 ? "row" : "column",
     paddingTop: "30px",
     paddingBottom: "30px",
-    backgroundColor: "rgba(0,0,70,0.7)",
+    backgroundColor: "#0A192F",
     height: "100vh",
   };
 
@@ -58,12 +59,12 @@ const Game = ({ wiDth }) => {
   ]);
 
   const dragStart = (e) => {
-    console.log(e.target.getAttribute("data-id"));
+    // console.log(e.target.getAttribute("data-id"));
     setSquareBeingDragged(e.target);
   };
 
   const dragDrop = (e) => {
-    console.log(e.target.getAttribute("data-id"));
+    // console.log(e.target.getAttribute("data-id"));
     setSquareBeingReplaced(e.target);
   };
 
@@ -130,7 +131,7 @@ const Game = ({ wiDth }) => {
         style={{
           width:
             wiDth > 615
-              ? "560px"
+              ? "530px"
               : wiDth > 520
               ? "464px"
               : wiDth > 390
@@ -138,7 +139,7 @@ const Game = ({ wiDth }) => {
               : "256px",
           height:
             wiDth > 615
-              ? "560px"
+              ? "530px"
               : wiDth > 520
               ? "464px"
               : wiDth > 390
@@ -147,7 +148,6 @@ const Game = ({ wiDth }) => {
           display: "flex",
           flexWrap: "wrap",
           margin: "0 auto 2rem auto",
-          touchAction: "none",
         }}
       >
         {currentColorArrangament.map((candyColor, index) => (
@@ -156,10 +156,12 @@ const Game = ({ wiDth }) => {
             src={candyColor}
             data-id={index}
             style={{
+              border: "1px solid #F6BE3B",
+              padding: "4px",
               cursor: "auto",
               width:
                 wiDth > 615
-                  ? "70px"
+                  ? "64px"
                   : wiDth > 520
                   ? "58px"
                   : wiDth > 390
@@ -167,7 +169,7 @@ const Game = ({ wiDth }) => {
                   : "32px",
               height:
                 wiDth > 615
-                  ? "70px"
+                  ? "64px"
                   : wiDth > 520
                   ? "58px"
                   : wiDth > 390
@@ -188,7 +190,6 @@ const Game = ({ wiDth }) => {
           />
         ))}
       </div>
-
       <ScoreBoard scoreDisplay={scoreDisplay} gameStyles={gameStyles} />
     </div>
   );

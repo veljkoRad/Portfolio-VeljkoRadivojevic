@@ -2,7 +2,7 @@ import { Fab, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const DefaultPhotos = ({ setHidePagination, setPic, setNum, num, api }) => {
+const DefaultPhotos = ({ setHidePagination, setPic, setNum, api }) => {
   const datas = "http://localhost:5000/photos";
   const [filter, setFilter] = useState([]);
   useEffect(() => {
@@ -15,14 +15,16 @@ const DefaultPhotos = ({ setHidePagination, setPic, setNum, num, api }) => {
         axios.get(api).then((res) => setPic(res.data));
         setHidePagination(true);
       }}
-      color="myColors3"
+      sx={{
+        border: "solid 2px #F6BE3B",
+        boxShadow: "none",
+        color: "#F1F1E6",
+      }}
+      color="myColors"
       variant="extended"
       size="small"
-      sx={{
-        color: "white",
-      }}
     >
-      <Typography>Show All Photos</Typography>
+      <Typography>All Photos</Typography>
     </Fab>
   );
 };

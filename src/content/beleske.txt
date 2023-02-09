@@ -1,3 +1,18 @@
+Deisgn beleske:
+      -Prvo sam izabrao svoju primary color,zatim na stranici mycolor.space kada stavim tu primary boju.
+      -Ona ce mi predloziti koje idu uz nju,treba da imam primary,secondary,action(dugmici samo) i eventrualno boja fonta(crna il bela)
+      -Odnos: 1.Primary 60% ekrana 2.Secondary 30% 3.Active(10%) dugmici i tako to.
+      -Override styles Material UI
+            U index.js sam createTheme,gde sam definisao components( npr:components:{MuiFab:{styleOverrides:{root:{color:'red} } } } 
+                  ovo je za klasu "MuiFab-root" )
+            -Kako da nadjem ime klase koje treba da definisem u createTheme?
+                  -U browser u inspect kad stisnem componentu gledam u elements .
+                  -Klikcem po drugim elementima iz te komponente sve dok ne nadem definisanu boju koju treba da zamenim.Gde je ta boja to je ta klasa.
+                  -umesto root moze i npr:  MuiOutlinedInput-notchedOutline. Sve je isto samo umesto objeka root definisem notchedOutline:{color:'red'}
+      -KAKO DEFINISEM INLINE I EXTERNAL STYLE I SX ILI STYLE?
+            - style={{...sxStyles.mainCard,borderColor:'red}}
+
+            
 PORTFOLIO BELESKE
       -Ako ne stavim za AppBar position='relativ necu videti elemente jer ce se nalaziti IZA AppBar.Mogu i ovde position sticky i dodam top:0
       -Ako ne stavim CssBaseline cela strana ce biti uokvirena belom marginom(testitraj ako treba).
@@ -8,6 +23,9 @@ PORTFOLIO BELESKE
       -Sliku sam ubacio u AVATAR tako sto sam importovao sliku (import profile from '../../assets/profile.jpg') i onda sam u src={profile}
       -Da prikazem u konzoli koja mi je VISINA PRI SKROLOVANJU,napravim funkciju const changeHeight=()=>{ console.log(window.scrollY)} i zatim window.addEventListener('scroll',changeHeight)
       -Promena booje textfielda.Posto nisam znao kako da uticem na borderCOlor when focus,treba samo da upisam color:primary.Jedini nacin da ubacim svoju boju je u pallete.myCOlors definisem main i onda kad stavim color='myColors' bice mi main boja po default-u
+      -Ubacivanje novog fonta:
+            -odem u Google fonts,nadjem sta treba,stisnem plus,on mi izbaci tri linka koje stavim u index.html 
+            -u create theme,stavim kako mi pise(npr:"lato", "cursive)..
       -React Scroll -instalio ga u ract i importovao link from react-scroll zatim napravio componentu
             u istoj componenti sam stavio activeClass={sxStyles.active}
       -Promena boje custom fona.pomocu create theme,morao sam da ubacim u AllVariatns inace ne prihvata nikakve promene{proveri u App.js}
@@ -58,30 +76,18 @@ GAME BELESKE
       -U mobilnom odem u settings about fon,nadjem "Build number" i klikcem dosta puta dok se ne pojavi dev folder.
       -kada konektujem mobilni u komp sa usb kablom, u mobilnom u settings /System&Updates/Developer options i ukljucim USB debugging.Moram da ostanem u tom folderu da se ne bi iskljucilo automatski.
       -u terminal u vsCode kucam ipconfig,kopiram ipv4 adress,umesto localhost:300,kopiram : '192.168.1.9:3000' i sada kada je fon povezan usb-om na komp,kopiram ovu adresu i mogu preko mobilnom.
-      
+      -Da zamenim boju svg ikonice otvorim taj svg fajl pomocu notepad i nadjem current color:'0092ff'
 
 PLAN DALJI: 
-      -Readame upisi:
-            Sta sam koristio.?
-                  -Material UI i Material UI Icons
-                  -veryicon.com
-                  -Emailjs koji se nalazi u home/contact
-                  -ReactScroll
-                  -React Router
-                  -npm Json server 
-                  -Axios
-            Kako se koristi  
-                  -npm run server ili ispod npm scripts dugme "server"
       -Dizajn stranice:
-            -Resi visine slika da budu iste(u carMedia ima negde opcija kaze Ugljesa).
-            -Odgledaj clip,design pages colors,tako nesto.
-            -Uzmi fontove bolje,obrisi ovaj pisani,kao nemanja pantelic koristi.
-            -Neka boje stranica budu iste(ukinu background sliku i gradient).
-            -U paletama imas jednu main i par pomocnih(npr jedna boja oznacava da je to dugme itd..opet mozes Nemanju Pantelic da kopiras sa bojama lagano.)
-            -Promeni Navbar,al ne ko nemanja,uzmi iz material ui primer.      
+            -U home,zavrsi responsive design.
+            -U materials ui u appbar vidi kako "scroll to hide" i uradi.
+            -Promeni Navbar,al ne ko nemanja,uzmi iz material ui primer.
+            -Kada si zavrsio skroz Design,pusti malo da slegne,zatim pogledaj nemanjinu i jos par stranica (sa tutoriala web develop design colors),zatim uporedi sa svojim      
       Trazenje Posla:
             Posaljem motivaciono,cv i link github profila.
                   Napravi wordow Cv,slicno ko Nemanja Pantelic,al laganije slobodno.
+                  Napisi i  predmete u na faksu iz programiranja
                   Napravi Linked in,izmeni kako treba za programera.
                   Kontaktiraj Likusu koju ti je poslao Ugljesa.
                   Kontaktiraj Losmijevu pomoc.
