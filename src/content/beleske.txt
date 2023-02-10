@@ -79,10 +79,8 @@ GAME BELESKE
       -Da zamenim boju svg ikonice otvorim taj svg fajl pomocu notepad i nadjem current color:'0092ff'
 
 PLAN DALJI: 
-      -Dizajn stranice:
-            -U home,zavrsi responsive design.
-            -U materials ui u appbar vidi kako "scroll to hide" i uradi.
-            -Promeni Navbar,al ne ko nemanja,uzmi iz material ui primer.
+      -Dizajn stranice
+            -Promeni gradijent secondary boje,na fontovima(home i api) probaj varijacije
             -Kada si zavrsio skroz Design,pusti malo da slegne,zatim pogledaj nemanjinu i jos par stranica (sa tutoriala web develop design colors),zatim uporedi sa svojim      
       Trazenje Posla:
             Posaljem motivaciono,cv i link github profila.

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { Fab, Typography } from "@mui/material";
 
-const Filters = ({ setPic, setHidePagination }) => {
+const Filters = ({ setPic, setHidePagination, width }) => {
   //Filtering all photos start
   const data = "http://localhost:5000/photos";
   const [filter, setFilter] = useState([]);
@@ -28,6 +28,25 @@ const Filters = ({ setPic, setHidePagination }) => {
   ];
   return (
     <div>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <Typography color="myColors.secondary" sx={{ fontSize: "18px" }}>
+          Filters
+        </Typography>
+        <div
+          style={{
+            marginBottom: "10px",
+            width: width > 899 ? "60%" : "20%",
+            height: "2px",
+            borderRadius: "1px",
+            backgroundColor: "#0092FF",
+          }}
+        ></div>
+      </div>
       {allMountains.map((item, id) => (
         <Fab
           key={id}

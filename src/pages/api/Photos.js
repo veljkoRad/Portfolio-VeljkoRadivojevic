@@ -1,6 +1,13 @@
-import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
+import {
+  Grid,
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  ThemeProvider,
+} from "@mui/material";
 import { Link } from "react-router-dom";
-const Photos = ({ apiStyles, pic, width }) => {
+const Photos = ({ apiStyles, pic, width, fontTheme }) => {
   const photoProp = {
     margin: width < 900 ? "0 auto 0 auto" : "",
   };
@@ -13,26 +20,23 @@ const Photos = ({ apiStyles, pic, width }) => {
             <Card sx={apiStyles.photoItem}>
               <CardMedia component="img" height="250px" src={item.image} />
               <CardContent sx={apiStyles.photoContent}>
-                <Typography align="center" color="myColors.white" gutterBottom>
+                <ThemeProvider theme={fontTheme}>
                   <Typography
                     align="center"
-                    component="span"
-                    color="myColors.main"
+                    color="#0A192F"
+                    sx={{ fontSize: "25px" }}
+                    gutterBottom
                   >
-                    Mountain:
+                    {item.mountain}
                   </Typography>
-                  {item.mountain}
-                </Typography>
-                <Typography align="center" color="myColors.white">
                   <Typography
                     align="center"
-                    component="span"
-                    color="myColors.main"
+                    color="#F1F1E6"
+                    sx={{ fontSize: "15px" }}
                   >
-                    Location:
+                    {item.location}
                   </Typography>
-                  {item.location}
-                </Typography>
+                </ThemeProvider>
               </CardContent>
             </Card>
           </Link>

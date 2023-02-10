@@ -15,9 +15,12 @@ export const apiStyles = {
     marginBottom: "2rem",
   },
   photoItem: {
-    backgroundColor: "rgba(0,146,255,0.6)",
+    backgroundColor: "rgba(0,146,255,0.5)",
     borderRadius: "6px",
-    "&:hover": { transform: " translate(0,-10px)" },
+    "&:hover": {
+      transform: " translate(0,-10px)",
+      border: "solid 2px #F6BE3B",
+    },
   },
   filterComp: {
     display: "flex",

@@ -42,7 +42,9 @@ const Experience = ({ sidebarItems, sxStyles, width, theme }) => {
         <Grid container sx={{ height: "100%" }}>
           <Grid item xs={12} sx={{ textAlign: "center", marginBottom: "20px" }}>
             <ThemeProvider theme={theme}>
-              <Typography color="#F6BE3B">Current skills</Typography>
+              <Typography color="#F6BE3B" sx={{ opacity: 0.9 }}>
+                Current skills
+              </Typography>
             </ThemeProvider>
           </Grid>
           {iconsArr.map((arr) => (
@@ -65,7 +67,9 @@ const Experience = ({ sidebarItems, sxStyles, width, theme }) => {
           ))}
           <Grid item xs={12} sx={{ textAlign: "center", marginBottom: "20px" }}>
             <ThemeProvider theme={theme}>
-              <Typography color="#F6BE3B">Sources of learning</Typography>
+              <Typography color="#F6BE3B" sx={{ opacity: 0.9 }}>
+                Sources of learning
+              </Typography>
             </ThemeProvider>
           </Grid>
           {iconsArr2.map((item) => (

@@ -14,7 +14,10 @@ const Navbar = ({ sxStyles, width, navBtn, setNavBtn, theme }) => {
     <AppBar sx={{ backgroundColor: "myColors.main" }} position="relative">
       <Toolbar>
         <ThemeProvider theme={theme}>
-          <Typography variant="h6" sx={{ color: "myColors.secondary" }}>
+          <Typography
+            variant="h6"
+            sx={{ color: "myColors.secondary", opacity: 0.9 }}
+          >
             Veljko Radivojevic
           </Typography>
         </ThemeProvider>

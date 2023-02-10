@@ -110,10 +110,8 @@ export const sxStyles = {
     color: "myColors.white",
   },
   divColored: {
-    backgroundColor: "inherit",
-    color: "#F1F1E6",
+    backgroundColor: "#0092FF",
     borderRadius: "20px",
-    border: "solid 1px #F6BE3B",
     padding: "10px 10px 10px 15px",
   },
   //Education Component end

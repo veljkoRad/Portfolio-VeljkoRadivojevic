@@ -20,6 +20,7 @@ const PhotoDetail = ({ pic, width }) => {
     <div
       style={{
         backgroundColor: `#0A192F`,
+        height: "100%",
       }}
     >
       <Link to={-1}>

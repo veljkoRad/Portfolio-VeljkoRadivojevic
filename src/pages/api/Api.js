@@ -13,11 +13,13 @@ const Api = ({
   width,
   hidePagination,
   setHidePagination,
+  fontTheme,
 }) => {
   return (
     <div style={apiStyles.main}>
       <Container sx={apiStyles.firstContainer}>
         <Typography
+          sx={{ opacity: 0.9 }}
           color="myColors.secondary"
           align="center"
           variant={width < 380 ? "h3" : "h2"}
@@ -26,6 +28,7 @@ const Api = ({
           Mountains of Serbia
         </Typography>
         <Typography
+          sx={{ opacity: 0.8 }}
           variant={width < 380 ? "body1" : "h6"}
           align="center"
           color="myColors.secondary"
@@ -66,6 +69,7 @@ const Api = ({
             pic={pic}
             num={num}
             setHidePagination={setHidePagination}
+            width={width}
           />
         </Grid>
         <Grid
@@ -76,7 +80,12 @@ const Api = ({
           spacing={2}
           sx={{ margin: "0.7rem auto 0 auto" }}
         >
-          <Photos apiStyles={apiStyles} pic={pic} width={width} />
+          <Photos
+            apiStyles={apiStyles}
+            pic={pic}
+            width={width}
+            fontTheme={fontTheme}
+          />
         </Grid>
       </Grid>
     </div>

@@ -109,6 +109,7 @@ function App() {
                 width={width}
                 hidePagination={hidePagination}
                 setHidePagination={setHidePagination}
+                fontTheme={fontTheme}
               />
             }
           ></Route>
