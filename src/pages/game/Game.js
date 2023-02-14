@@ -21,15 +21,6 @@ import {
 
 const Game = ({ wiDth }) => {
   const candyColors = [cloud, moon, sun, mountain, tree, diamond];
-  const mainDiv = {
-    display: "flex",
-    justifyContent: "space-evenly",
-    flexDirection: wiDth > 882 ? "row" : "column",
-    paddingTop: "30px",
-    paddingBottom: "30px",
-    backgroundColor: "#0A192F",
-    height: "100vh",
-  };
 
   const [currentColorArrangament, setCurrentColorArrangament] = useState([]);
   const [squareBeingDragged, setSquareBeingDragged] = useState(null);
@@ -126,7 +117,12 @@ const Game = ({ wiDth }) => {
   };
 
   return (
-    <div style={mainDiv}>
+    <div
+      style={{
+        ...gameStyles.mainDiv,
+        flexDirection: wiDth > 882 ? "row" : "column",
+      }}
+    >
       <div
         style={{
           width:

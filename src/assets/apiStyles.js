@@ -3,6 +3,7 @@ export const apiStyles = {
   main: {
     width: "100%",
     backgroundColor: "#0A192F",
+    paddingTop: "64px",
     paddingBottom: "2rem",
   },
   firstContainer: {

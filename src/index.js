@@ -49,6 +49,13 @@ const theme = createTheme({
         },
       },
     },
+    MuiTypography: {
+      styleOverrides: {
+        root: {
+          cursor: "pointer",
+        },
+      },
+    },
   },
 });
 const root = ReactDOM.createRoot(document.getElementById("root"));

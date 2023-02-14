@@ -32,6 +32,7 @@ const Filters = ({ setPic, setHidePagination, width }) => {
         style={{
           display: "flex",
           flexDirection: "column",
+          marginLeft: "5px",
         }}
       >
         <Typography color="myColors.secondary" sx={{ fontSize: "18px" }}>

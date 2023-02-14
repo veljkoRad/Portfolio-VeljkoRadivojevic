@@ -18,7 +18,7 @@ const Sidebar = ({ sidebarItems, sxStyles }) => {
               to={item.name}
               spy={true}
               smooth={true}
-              offset={-80}
+              offset={-110}
               duration={800}
               style={{ width: "100%" }}
               activeStyle={sxStyles.active}

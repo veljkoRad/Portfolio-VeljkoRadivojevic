@@ -11,7 +11,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = ({ sxStyles, width, navBtn, setNavBtn, theme }) => {
   return (
-    <AppBar sx={{ backgroundColor: "myColors.main" }} position="relative">
+    <AppBar sx={{ backgroundColor: "myColors.main" }} position="fixed">
       <Toolbar>
         <ThemeProvider theme={theme}>
           <Typography

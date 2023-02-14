@@ -1,4 +1,12 @@
 export const gameStyles = {
+  mainDiv: {
+    display: "flex",
+    justifyContent: "space-around",
+    paddingTop: "80px",
+    paddingBottom: "30px",
+    backgroundColor: "#0A192F",
+    height: "100%",
+  },
   myGame: {
     width: "560px",
     height: "560px",
