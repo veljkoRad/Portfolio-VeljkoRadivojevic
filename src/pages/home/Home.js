@@ -1,58 +1,39 @@
-import { useState, useEffect } from "react";
-import Sidebar from "./Sidebar";
+import { Container, Grid, useTheme, styled } from "@mui/material";
 import About from "./About";
+import Contact from "./Contact";
 import Education from "./Education";
 import Experience from "./Experience";
-import Contact from "./Contact";
-import {
-  Grid,
-  Typography,
-  Avatar,
-  Card,
-  CardContent,
-  Container,
-} from "@mui/material";
+import Sidebar from "./Sidebar";
 
-const Home = ({ sidebarItems, sxStyles, fontTheme, width }) => {
+const StyledContainer = styled(Container)(() => ({
+  gap: "90px",
+  justifyContent: "space-evenly",
+  position: "static",
+  paddingTop: "90px",
+  paddingBottom: "90px",
+}));
+
+const Home = ({ width }) => {
+  const theme = useTheme();
   return (
     <div
       style={{
-        backgroundColor: "#0A192F",
+        backgroundColor: theme.palette.primary.main,
       }}
     >
       <Grid container spacing={0}>
         {width > 600 && (
           <Grid item xs={2}>
-            <Sidebar sidebarItems={sidebarItems} sxStyles={sxStyles} />
+            <Sidebar />
           </Grid>
         )}
         <Grid item xs={12} sm={10}>
-          <Container className="aboutMain" sx={sxStyles.aboutMain}>
-            <About
-              sidebarItems={sidebarItems}
-              sxStyles={sxStyles}
-              fontTheme={fontTheme}
-              width={width}
-            />
-            <Education
-              sidebarItems={sidebarItems}
-              sxStyles={sxStyles}
-              fontTheme={fontTheme}
-              width={width}
-            />
-            <Experience
-              sidebarItems={sidebarItems}
-              sxStyles={sxStyles}
-              width={width}
-              theme={fontTheme}
-            />
-            <Contact
-              sidebarItems={sidebarItems}
-              sxStyles={sxStyles}
-              fontTheme={fontTheme}
-              width={width}
-            />
-          </Container>
+          <StyledContainer>
+            <About width={width} />
+            <Education width={width} />
+            <Experience width={width} />
+            <Contact width={width} />
+          </StyledContainer>
         </Grid>
       </Grid>
     </div>

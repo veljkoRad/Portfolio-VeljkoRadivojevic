@@ -1,31 +1,35 @@
-import {
-  Card,
-  CardContent,
-  Avatar,
-  Typography,
-  ThemeProvider,
-} from "@mui/material";
+import { Avatar, Card, CardContent, Typography, styled } from "@mui/material";
 import profile from "../../assets/photos&images/profile.jpg";
 
-const About = ({ width, sxStyles, fontTheme }) => {
+const StyledAvatar = styled(Avatar)(() => ({
+  width: 170,
+  height: 170,
+  marginRight: "20%",
+  marginLeft: "auto",
+  border: "2px solid #F6BE3B",
+}));
+
+const About = ({ width }) => {
+  const StyledTypography = styled(Typography)(() => ({
+    fontSize: width < 360 && "1.1rem",
+  }));
+
   return (
-    <Card sx={sxStyles.mainCard1} name="About">
-      <Avatar alt="Veljko Radivojevic" src={profile} sx={sxStyles.profilePic} />
+    <Card name="About">
+      <StyledAvatar alt="Veljko Radivojevic" src={profile} />
       <CardContent>
-        <ThemeProvider theme={fontTheme}>
-          <Typography sx={{ fontSize: width < 360 && "1.1rem", opacity: 0.9 }}>
-            Hello, I'm Veljko{" "}
-          </Typography>
-          <Typography sx={{ fontSize: width < 360 && "1.1rem", opacity: 0.8 }}>
-            Born 1992 in Belegrade.
-          </Typography>
-          <Typography sx={{ fontSize: width < 360 && "1.1rem", opacity: 0.7 }}>
-            Working with pc is my passion since I was boy.
-          </Typography>
-          <Typography sx={{ fontSize: width < 360 && "1.1rem", opacity: 0.6 }}>
-            Now, I'm enjoying on my road to become great Web Developer.
-          </Typography>
-        </ThemeProvider>
+        <StyledTypography sx={{ opacity: 0.9 }}>
+          Hello, I'm Veljko{" "}
+        </StyledTypography>
+        <StyledTypography sx={{ opacity: 0.8 }}>
+          Born 1992 in Belegrade.
+        </StyledTypography>
+        <StyledTypography sx={{ opacity: 0.7 }}>
+          Working with pc is my passion since I was boy.
+        </StyledTypography>
+        <StyledTypography sx={{ opacity: 0.6 }}>
+          Now, I'm enjoying on my road to become great Web Developer.
+        </StyledTypography>
       </CardContent>
     </Card>
   );

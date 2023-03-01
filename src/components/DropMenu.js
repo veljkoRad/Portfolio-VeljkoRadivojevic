@@ -1,54 +1,34 @@
-import { SportsRugbySharp } from "@mui/icons-material";
-import React from "react";
 import { NavLink } from "react-router-dom";
+import { myStyles } from "../assets/myStyles";
+import { breadcrumbList } from "../data/dataItems";
 
-const DropMenu = ({ sxStyles, setNavBtn }) => {
-  const menuStyle = {
-    padding: "2rem",
-    backgroundColor: "rgba(10,25,47,0.7)",
-    height: "100%",
-    width: "100vw",
-    display: "flex",
-    gap: "2rem",
-    flexDirection: "column",
-    alignItems: "center",
-  };
+const menuStyle = {
+  paddingTop: "100px",
+  backgroundColor: "rgba(10,25,47,0.7)",
+  height: "100%",
+  width: "100vw",
+  display: "flex",
+  gap: "2rem",
+  flexDirection: "column",
+  alignItems: "center",
+};
 
+const DropMenu = ({ setNavBtn }) => {
   return (
     <div style={menuStyle}>
-      <NavLink
-        onClick={() => setNavBtn(false)}
-        to="/"
-        style={({ isActive }) => {
-          return isActive
-            ? sxStyles.responsiveRouterActive
-            : sxStyles.responsiveRouter;
-        }}
-      >
-        Portfolio
-      </NavLink>
-      <NavLink
-        onClick={() => setNavBtn(false)}
-        to="/api"
-        style={({ isActive }) => {
-          return isActive
-            ? sxStyles.responsiveRouterActive
-            : sxStyles.responsiveRouter;
-        }}
-      >
-        Album
-      </NavLink>
-      <NavLink
-        onClick={() => setNavBtn(false)}
-        to="/game"
-        style={({ isActive }) => {
-          return isActive
-            ? sxStyles.responsiveRouterActive
-            : sxStyles.responsiveRouter;
-        }}
-      >
-        Game
-      </NavLink>
+      {breadcrumbList.map((item) => (
+        <NavLink
+          onClick={() => setNavBtn(false)}
+          to={item.location}
+          style={({ isActive }) => {
+            return isActive
+              ? myStyles.responsiveRouterActive
+              : myStyles.responsiveRouter;
+          }}
+        >
+          {item.name}
+        </NavLink>
+      ))}
     </div>
   );
 };

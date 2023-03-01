@@ -1,20 +1,35 @@
-import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import {
   Button,
-  Input,
   Card,
   CardContent,
   Grid,
+  Input,
   Link,
-  Typography,
+  styled,
   TextField,
-  ThemeProvider,
+  Typography,
 } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import React, { useRef } from "react";
 
-const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
+const StyledGrid = styled(Grid)(() => ({
+  display: "flex",
+  flexDirection: "column",
+  width: "100%",
+  gap: "2.5rem",
+}));
+
+const linkIcons = {
+  color: "error.main",
+  fontSize: "2rem",
+  "&:hover": {
+    color: "info.main",
+  },
+};
+
+const Contact = ({ width }) => {
   //Email form start
   const form = useRef();
   const sendEmail = (e) => {
@@ -40,15 +55,16 @@ const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
   //Email form end
 
   return (
-    <Card sx={sxStyles.mainCard2} id="contact" name="Contact">
+    <Card id="contact" name="Contact">
       <CardContent>
         <form ref={form} onSubmit={sendEmail}>
-          <Grid sx={sxStyles.contactCard}>
-            <ThemeProvider theme={fontTheme}>
-              <Typography variant="h6" sx={sxStyles.contactMe}>
-                Contact me:
-              </Typography>
-            </ThemeProvider>
+          <StyledGrid>
+            <Typography
+              variant="h6"
+              sx={{ marginLeft: "auto", marginBottom: "-2.5rem" }}
+            >
+              Contact me:
+            </Typography>
             <Grid
               item
               xs={12}
@@ -59,19 +75,19 @@ const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
                 justifyContent: "flex-end",
               }}
             >
-              <Typography sx={sxStyles.mailLink}>
+              <Typography sx={{ fontSize: "1rem" }}>
                 radivojevicveljko@gmail.com
               </Typography>
 
               <div style={{ display: "flex", gap: "5px" }}>
                 <Link href="https://github.com/veljkoRad" target="_blank">
-                  <GitHubIcon sx={sxStyles.linkIcons} />
+                  <GitHubIcon sx={linkIcons} />
                 </Link>
                 <Link
                   href="https://www.instagram.com/rveljko92/"
                   target="_blank"
                 >
-                  <InstagramIcon sx={sxStyles.linkIcons} />
+                  <InstagramIcon sx={linkIcons} />
                 </Link>
               </div>
             </Grid>
@@ -89,14 +105,14 @@ const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
                 fullWidth
                 label="Your Name"
                 name="to_name"
-                color="myColors3"
+                color="secondary"
               />
               <TextField
                 type="email"
                 fullWidth
                 label="Your Email"
                 name="from_name"
-                color="myColors3"
+                color="secondary"
               />
             </Grid>
             <TextField
@@ -104,21 +120,21 @@ const Contact = ({ sxStyles, sidebarItems, fontTheme, width }) => {
               name="message"
               multiline
               rows={width < 376 ? 2 : 4}
-              color="myColors3"
+              color="secondary"
             />
 
-            <Button variant="outlined" color="myColors3">
+            <Button variant="outlined" color="secondary">
               <Input
                 fullWidth
                 type="submit"
                 disableUnderline
                 sx={{
-                  color: "myColors.third",
+                  color: "error.main",
                   fontWeight: "bold",
                 }}
               />
             </Button>
-          </Grid>
+          </StyledGrid>
         </form>
       </CardContent>
     </Card>

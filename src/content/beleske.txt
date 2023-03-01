@@ -1,4 +1,5 @@
 Deisgn beleske:
+      
       -Prvo sam izabrao svoju primary color,zatim na stranici mycolor.space kada stavim tu primary boju.
       -Ona ce mi predloziti koje idu uz nju,treba da imam primary,secondary,action(dugmici samo) i eventrualno boja fonta(crna il bela)
       -Odnos: 1.Primary 60% ekrana 2.Secondary 30% 3.Active(10%) dugmici i tako to.
@@ -8,10 +9,17 @@ Deisgn beleske:
             -Kako da nadjem ime klase koje treba da definisem u createTheme?
                   -U browser u inspect kad stisnem componentu gledam u elements .
                   -Klikcem po drugim elementima iz te komponente sve dok ne nadem definisanu boju koju treba da zamenim.Gde je ta boja to je ta klasa.
-                  -umesto root moze i npr:  MuiOutlinedInput-notchedOutline. Sve je isto samo umesto objeka root definisem notchedOutline:{color:'red'}
+                  -Umesto root moze i npr:  MuiOutlinedInput-notchedOutline. Sve je isto samo umesto objeka root definisem notchedOutline:{color:'red'}.
       -KAKO DEFINISEM INLINE I EXTERNAL STYLE I SX ILI STYLE?
-            - style={{...sxStyles.mainCard,borderColor:'red}}
-
+            - style={{...sxStyles.mainCard,borderColor:'red}}.
+      -Navikni se da searcujes sve sto ti treba u vs code.
+      -Palette collors:
+            -U index.js overajdujem primary.main=,secodnary.main... tako definisem sve boje koje koristim.Ako neku boju nece da prepozna,definisi color="error.main".
+            -Definisanje paleta za obicne elemente(ne materail UI comp).
+            -Definisanje div elemneta sa pallete: importujem useTheme zatim definisem u comp const theme=makeTheme().
+            -zatim <div style={{color:theme.pallete.primary.main}}.
+            -Kako da definisem komponentu u createTheme sa palette ? 
+                  npr: MuiFab:{styleOverrides:{root: ({ theme }) => ({backgroundColor: theme.palette.error.main})}
             
 PORTFOLIO BELESKE
       -Ako ne stavim za AppBar position='relativ necu videti elemente jer ce se nalaziti IZA AppBar.Mogu i ovde position sticky i dodam top:0
@@ -80,22 +88,18 @@ GAME BELESKE
 
 PLAN DALJI: 
       -Dizajn stranice
-            -Promeni gradijent secondary boje,na fontovima(home i api) probaj varijacije
+            Nastavi od palette collors,font style iz app si prebacio u index.js
             -Kada si zavrsio skroz Design,pusti malo da slegne,zatim pogledaj nemanjinu i jos par stranica (sa tutoriala web develop design colors),zatim uporedi sa svojim      
+            -Kada udjem u photoDetail ne vidi se back arrow zbog navbar fixed,resi to.
       Trazenje Posla:
             Posaljem motivaciono,cv i link github profila.
-                  Napravi wordow Cv,slicno ko Nemanja Pantelic,al laganije slobodno.
-                  Napisi i  predmete u na faksu iz programiranja
+
                   Napravi Linked in,izmeni kako treba za programera.
                   Kontaktiraj Likusu koju ti je poslao Ugljesa.
                   Kontaktiraj Losmijevu pomoc.
                   Izmeni i trazi na  infsostudu ili slicnim stranicama posao kao React Programer i samo salji,iako pise iskusvo.
       Usput uci jos o reactu, gledaj klipove i nadogradi cv ako treba.kad zavrsis sve ovo.
 
-
-
-Pitanja:
--Sta da radim sa serverom da bude pristupacniji?
 
 
  

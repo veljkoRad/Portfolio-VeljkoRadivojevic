@@ -1,39 +1,38 @@
-import { Card, CardContent, Typography, ThemeProvider } from "@mui/material";
+import { Card, CardContent, Typography, styled } from "@mui/material";
 
-const Education = ({ sidebarItems, sxStyles, fontTheme, width }) => {
-  const eduTextStyle1 = {
+const divColored = {
+  backgroundColor: "#0092FF",
+  borderRadius: "20px",
+  padding: "10px 10px 10px 15px",
+};
+
+const Education = ({ width }) => {
+  const EduTyp1 = styled(Typography)(({ theme }) => ({
     fontSize: width > 370 ? "1.3rem" : "0.95rem",
-  };
-  const eduTextStyle2 = { fontSize: width > 370 ? "1rem" : "0.75rem" };
+    color: theme.palette.primary.main,
+  }));
+  const EduTyp2 = styled(Typography)(({ theme }) => ({
+    fontSize: width > 370 ? "1rem" : "0.75rem",
+    color: theme.palette.primary.main,
+  }));
 
   return (
-    <Card sx={sxStyles.mainCard2} id="education" name="Education">
-      <CardContent sx={sxStyles.educationComp}>
-        <ThemeProvider theme={fontTheme}>
-          <div style={{ ...sxStyles.divColored, opacity: 0.6 }}>
-            <Typography sx={eduTextStyle1} color="#0A192F">
-              “Polytechnic" - high school for new technologies
-            </Typography>
-            <Typography sx={eduTextStyle2} color="#0A192F">
-              2007-2011,Belgrade
-            </Typography>
-          </div>
-          <div style={{ ...sxStyles.divColored, opacity: 0.55 }}>
-            <Typography sx={eduTextStyle1} color="#0A192F">
-              Faculty of Mechanical Engineering
-            </Typography>
-            <Typography sx={eduTextStyle2} color="#0A192F">
-              2011-2018, University of Belgrade
-            </Typography>
-          </div>
-          <div style={{ ...sxStyles.divColored, opacity: 0.5 }}>
-            <Typography sx={eduTextStyle1} color="#0A192F">
-              Worked as CNC Programmer for 3+years in several companies
-            </Typography>
-          </div>
-        </ThemeProvider>
+    <Card id="education" name="Education">
+      <CardContent>
+        <div style={{ ...divColored, opacity: 0.6 }}>
+          <EduTyp1>“Polytechnic" - high school for new technologies</EduTyp1>
+          <EduTyp2>2007-2011,Belgrade</EduTyp2>
+        </div>
+        <div style={{ ...divColored, opacity: 0.55 }}>
+          <EduTyp1>Faculty of Mechanical Engineering</EduTyp1>
+          <EduTyp2>2011-2018, University of Belgrade</EduTyp2>
+        </div>
+        <div style={{ ...divColored, opacity: 0.5 }}>
+          <EduTyp1>
+            Worked as CNC Programmer for 3+years in several companies
+          </EduTyp1>
+        </div>
         <Typography
-          color="myColors.secondary"
           sx={{ fontSize: width < 430 ? "1rem" : "1.4rem", opacity: 0.75 }}
         >
           My math skills, taken from college help me a lot through learning web

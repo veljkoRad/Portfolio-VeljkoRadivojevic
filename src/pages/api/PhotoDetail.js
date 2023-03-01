@@ -1,79 +1,71 @@
-import { useState, useEffect } from "react";
-import tremDrugi from "../../assets/photos&images/tremDrugi.jpg";
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import { apiStyles } from "../../assets/apiStyles";
-import { Link } from "react-router-dom";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import { Container, Typography } from "@mui/material";
+import { Container, Typography, useTheme, styled } from "@mui/material";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
-const PhotoDetail = ({ pic, width }) => {
+const StyledIcon = styled(ArrowBackIosNewIcon)(({ theme }) => ({
+  top: "20px",
+  left: "10px",
+  position: "relative",
+  color: theme.palette.error.main,
+}));
+
+const cardPhoto = {
+  borderRadius: "6px",
+  width: "90%",
+  maxHeight: "500px",
+};
+
+const PhotoDetail = ({ width }) => {
+  const theme = useTheme();
   const { id } = useParams();
 
   const [data, setData] = useState([]);
   let adress = `http://localhost:5000/photos/${id}`;
   useEffect(() => {
     axios.get(adress).then((res) => setData(res.data));
-  }, [adress]);
+  }, []);
 
   return (
     <div
       style={{
-        backgroundColor: `#0A192F`,
+        backgroundColor: theme.palette.primary.main,
         height: "100%",
+        paddingTop: "60px",
       }}
     >
       <Link to={-1}>
-        <ArrowBackIosNewIcon
-          fontSize="large"
-          color="myColors2"
-          sx={apiStyles.backArrow}
-        />
+        <StyledIcon fontSize="large" />
       </Link>
       <Container
-        style={{
+        sx={{
           width: "100%",
           height: "100vh",
-          display: "flex",
           flexDirection: width >= 900 ? "row" : "column",
-          alignItems: "center",
           justifyContent: "center",
         }}
       >
         <div style={{ width: "50%" }}>
-          <img src={data.image} style={apiStyles.cardPhoto} alt="" />
+          <img src={data.image} style={cardPhoto} alt="" />
         </div>
         <div style={{ textAlign: "center" }}>
-          <Typography variant="h4" color="myColors.secondary">
-            "{data.name}"
-          </Typography>
-          <Typography color="myColors.white">
+          <Typography variant="h4">"{data.name}"</Typography>
+          <Typography color="info.main">
             Mountain:{" "}
-            <Typography
-              component="span"
-              variant="h6"
-              color="myColors.secondary"
-            >
+            <Typography component="span" variant="h6">
               {data.mountain}
             </Typography>
           </Typography>
-          <Typography color="myColors.white">
+          <Typography color="info.main">
             Location:
-            <Typography
-              component="span"
-              variant="h6"
-              color="myColors.secondary"
-            >
+            <Typography component="span" variant="h6">
               {data.location}
             </Typography>
           </Typography>
-          <Typography color="myColors.white">
+          <Typography color="info.main">
             Highest Point:
-            <Typography
-              component="span"
-              variant="h6"
-              color="myColors.secondary"
-            >
+            <Typography component="span" variant="h6">
               {data.highestPoint}
             </Typography>
           </Typography>

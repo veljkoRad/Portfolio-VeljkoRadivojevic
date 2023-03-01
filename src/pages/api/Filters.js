@@ -1,31 +1,19 @@
-import { useState, useEffect } from "react";
+import { Fab, Typography, useTheme } from "@mui/material";
 import axios from "axios";
-import { Fab, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
+import { allMountains } from "../../data/dataItems";
 
 const Filters = ({ setPic, setHidePagination, width }) => {
+  const theme = useTheme();
+
   //Filtering all photos start
   const data = "http://localhost:5000/photos";
   const [filter, setFilter] = useState([]);
   useEffect(() => {
     axios.get(data).then((res) => setFilter(res.data));
-  }, [data]);
+  }, []);
   //Filtering all photos end
 
-  const allMountains = [
-    { name: "Bobija" },
-    { name: "Canyon of Nera" },
-    { name: "Goc" },
-    { name: "Golija" },
-    { name: "Homoljske mountains" },
-    { name: "Maljen" },
-    { name: "Lazarev Canyon" },
-    { name: "Ovcar" },
-    { name: "Rtanj" },
-    { name: "Rudnik" },
-    { name: "Suva Mountain" },
-    { name: "Stolovi" },
-    { name: "Tara" },
-  ];
   return (
     <div>
       <div
@@ -35,16 +23,14 @@ const Filters = ({ setPic, setHidePagination, width }) => {
           marginLeft: "5px",
         }}
       >
-        <Typography color="myColors.secondary" sx={{ fontSize: "18px" }}>
-          Filters
-        </Typography>
+        <Typography sx={{ fontSize: "18px" }}>Filters</Typography>
         <div
           style={{
             marginBottom: "10px",
             width: width > 899 ? "60%" : "20%",
             height: "2px",
             borderRadius: "1px",
-            backgroundColor: "#0092FF",
+            backgroundColor: theme.palette.secondary.main,
           }}
         ></div>
       </div>
@@ -56,7 +42,7 @@ const Filters = ({ setPic, setHidePagination, width }) => {
             boxShadow: "none",
             border: "solid 2px #F6BE3B",
           }}
-          color="myColors"
+          color="primary"
           variant="extended"
           size="small"
           onClick={() => {
@@ -64,11 +50,7 @@ const Filters = ({ setPic, setHidePagination, width }) => {
             setHidePagination(() => false);
           }}
         >
-          <Typography
-            variant="h4"
-            color="myColors.white"
-            sx={{ fontSize: "80%" }}
-          >
+          <Typography variant="h4" color="info.main" sx={{ fontSize: "80%" }}>
             {" "}
             {item.name}{" "}
           </Typography>

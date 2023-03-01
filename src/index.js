@@ -1,59 +1,150 @@
+import { createTheme, ThemeProvider } from "@mui/material/";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { ThemeProvider, createTheme } from "@mui/material/";
 
 const theme = createTheme({
   palette: {
-    myColors: {
-      main: "#0A192F",
-      secondary: "#0092FF",
-      third: "#F6BE3B",
-      white: "#F1F1E6",
-    },
-    myColors2: {
-      main: "#F6BE3B",
-    },
-    myColors3: {
-      main: "#0092FF",
-    },
+    primary: { main: "#0A192F" },
+    secondary: { main: "#0092FF" },
+    error: { main: "#F6BE3B" },
+    info: { main: "#F1F1E6" },
   },
   components: {
-    MuiFab: {
+    MuiAvatar: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          backgroundColor: theme.palette.info.main,
+          width: 55,
+          height: 55,
+        }),
+      },
+    },
+    MuiBreadcrumbs: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          marginLeft: "auto",
+          marginRight: "2rem",
+          color: theme.palette.info.main,
+        }),
+      },
+    },
+    MuiCard: {
       styleOverrides: {
         root: {
-          "&:hover": {
-            backgroundColor: "#F6BE3B",
-          },
+          paddingLeft: "0.5rem",
+          paddingRight: "0.5rem",
+          maxWidth: 500,
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexWrap: "wrap",
+          flexDirection: "column",
+          justifyContent: "space-evenly",
+          boxShadow: "none",
+          backgroundColor: "inherit",
         },
+      },
+    },
+    MuiCardContent: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          flexDirection: "column",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "1rem",
+          paddingLeft: "5px",
+          paddingRight: "5px",
+        },
+      },
+    },
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        },
+      },
+    },
+    MuiFab: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          "&:hover": {
+            backgroundColor: theme.palette.error.main,
+          },
+        }),
       },
     },
     MuiFormLabel: {
       styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.secondary.main,
+        }),
+      },
+    },
+    MuiList: {
+      styleOverrides: {
         root: {
-          color: "#0092FF",
+          position: "sticky",
+          top: "0",
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
         },
+      },
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        },
+      },
+    },
+    MuiListItemButton: {
+      styleOverrides: {
+        root: {
+          "&:hover": {
+            backgroundColor: "rgba(28,181,224,0.2)",
+          },
+          flexDirection: "column",
+        },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          color: theme.palette.secondary.main,
+          justifyContent: "center",
+        }),
       },
     },
     MuiOutlinedInput: {
       styleOverrides: {
-        notchedOutline: {
-          borderColor: "F6BE3B",
-        },
+        notchedOutline: ({ theme }) => ({
+          borderColor: theme.palette.secondary.main,
+        }),
       },
     },
     MuiPaginationItem: {
       styleOverrides: {
-        root: {
-          color: "#F1F1E6",
-        },
+        root: ({ theme }) => ({
+          color: theme.palette.info.main,
+        }),
       },
     },
     MuiTypography: {
       styleOverrides: {
-        root: {
-          cursor: "pointer",
-        },
+        root: ({ theme }) => ({
+          fontFamily: ["Lato", "sans-serif"].join(","),
+          color: theme.palette.secondary.main,
+          fontSize: "1.5rem",
+        }),
       },
     },
   },

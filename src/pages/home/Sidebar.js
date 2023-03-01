@@ -1,5 +1,3 @@
-import { Link } from "react-scroll";
-
 import {
   List,
   ListItem,
@@ -7,13 +5,20 @@ import {
   ListItemIcon,
   ListItemText,
 } from "@mui/material";
+import { Link } from "react-scroll";
+import { sxStyles } from "../../assets/myStyles";
+import { sidebarItems } from "../../data/dataItems";
 
-const Sidebar = ({ sidebarItems, sxStyles }) => {
+const active = {
+  borderBottom: "3px solid #F6BE3B",
+};
+
+const Sidebar = () => {
   return (
     <>
-      <List sx={sxStyles.sidebarList}>
+      <List>
         {sidebarItems.map((item) => (
-          <ListItem key={item.id} sx={sxStyles.sidebarItems}>
+          <ListItem key={item.id}>
             <Link
               to={item.name}
               spy={true}
@@ -21,15 +26,14 @@ const Sidebar = ({ sidebarItems, sxStyles }) => {
               offset={-110}
               duration={800}
               style={{ width: "100%" }}
-              activeStyle={sxStyles.active}
+              activeStyle={active}
             >
-              <ListItemButton sx={sxStyles.sidebarButtons}>
-                <ListItemIcon sx={sxStyles.sidebarIcons}>
-                  {item.img}
-                </ListItemIcon>
+              <ListItemButton>
+                <ListItemIcon>{item.img}</ListItemIcon>
                 <ListItemText
                   primary={item.name}
-                  sx={{ color: "myColors.secondary" }}
+                  disableTypography
+                  sx={{ fontSize: "19px", color: "secondary.main" }}
                 />
               </ListItemButton>
             </Link>

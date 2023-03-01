@@ -1,25 +1,25 @@
+import { useTheme } from "@mui/material";
 import { useEffect, useState } from "react";
-import { CardMedia } from "@mui/material";
-import { gameStyles } from "../../assets/gameStyles";
-import ScoreBoard from "./ScoreBoard";
+import { myStyles } from "../../assets/myStyles";
+import blank from "../../assets/photos&images/blank.png";
 import cloud from "../../assets/photos&images/cloud.svg";
+import diamond from "../../assets/photos&images/diamond.svg";
+import moon from "../../assets/photos&images/moon.svg";
 import mountain from "../../assets/photos&images/mountains.svg";
 import sun from "../../assets/photos&images/sun.svg";
 import tree from "../../assets/photos&images/tree.svg";
-import moon from "../../assets/photos&images/moon.svg";
-import blank from "../../assets/photos&images/blank.png";
-import diamond from "../../assets/photos&images/diamond.svg";
-
 import {
-  checkForRowOfThree,
-  checkForRowOfFour,
-  checkForColumnOfThree,
   checkForColumnOfFour,
-  moveIntoSquareBelow,
+  checkForColumnOfThree,
+  checkForRowOfFour,
+  checkForRowOfThree,
   createBoard,
+  moveIntoSquareBelow,
 } from "../../functions/functionsGame";
+import ScoreBoard from "./ScoreBoard";
 
 const Game = ({ wiDth }) => {
+  const theme = useTheme();
   const candyColors = [cloud, moon, sun, mountain, tree, diamond];
 
   const [currentColorArrangament, setCurrentColorArrangament] = useState([]);
@@ -119,8 +119,9 @@ const Game = ({ wiDth }) => {
   return (
     <div
       style={{
-        ...gameStyles.mainDiv,
+        ...myStyles.mainDiv,
         flexDirection: wiDth > 882 ? "row" : "column",
+        backgroundColor: theme.palette.primary.main,
       }}
     >
       <div
@@ -186,7 +187,7 @@ const Game = ({ wiDth }) => {
           />
         ))}
       </div>
-      <ScoreBoard scoreDisplay={scoreDisplay} gameStyles={gameStyles} />
+      <ScoreBoard scoreDisplay={scoreDisplay} theme={theme} />
     </div>
   );
 };

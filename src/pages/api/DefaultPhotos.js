@@ -1,6 +1,6 @@
 import { Fab, Typography } from "@mui/material";
-import { useState, useEffect } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 
 const DefaultPhotos = ({ setHidePagination, setPic, setNum, api }) => {
   const datas = "http://localhost:5000/photos";
@@ -18,13 +18,14 @@ const DefaultPhotos = ({ setHidePagination, setPic, setNum, api }) => {
       sx={{
         border: "solid 2px #F6BE3B",
         boxShadow: "none",
-        color: "#F1F1E6",
       }}
-      color="myColors"
+      color="primary"
       variant="extended"
       size="small"
     >
-      <Typography>All Photos</Typography>
+      <Typography color="info.main" sx={{ fontSize: "25px" }}>
+        All Photos
+      </Typography>
     </Fab>
   );
 };

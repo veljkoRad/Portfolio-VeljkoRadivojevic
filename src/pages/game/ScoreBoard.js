@@ -1,8 +1,15 @@
-const ScoreBoard = ({ scoreDisplay, gameStyles }) => {
+import { myStyles } from "../../assets/myStyles";
+
+const ScoreBoard = ({ scoreDisplay, theme }) => {
   return (
-    <div style={gameStyles.scoreBox}>
-      <div style={gameStyles.scoreText}>Score </div>
-      <div style={gameStyles.scoreText}>{scoreDisplay}</div>
+    <div
+      style={{
+        ...myStyles.scoreBox,
+        backgroundColor: theme.palette.secondary.main,
+      }}
+    >
+      <div style={{ fontSize: "1.4rem" }}>Score </div>
+      <div style={{ fontSize: "1.4rem" }}>{scoreDisplay}</div>
     </div>
   );
 };
