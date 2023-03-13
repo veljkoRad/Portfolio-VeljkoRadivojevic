@@ -1,8 +1,8 @@
-Deisgn beleske:
-      
-      -Prvo sam izabrao svoju primary color,zatim na stranici mycolor.space kada stavim tu primary boju.
-      -Ona ce mi predloziti koje idu uz nju,treba da imam primary,secondary,action(dugmici samo) i eventrualno boja fonta(crna il bela)
+Deisgn beleske
+      -Prvo sam izabrao svoju primary color,zatim na stranici mycolor.space kada stavim tu primary boju.i predlozice mi izbor ostalih bojja
       -Odnos: 1.Primary 60% ekrana 2.Secondary 30% 3.Active(10%) dugmici i tako to.
+      -Kako stilizujem elemente material ui?
+            -Redefinisem palette colors(primary,secon...) i sve iz tog sdefinisanog create Theme radim a ne za svaki element poseban stil.
       -Override styles Material UI
             U index.js sam createTheme,gde sam definisao components( npr:components:{MuiFab:{styleOverrides:{root:{color:'red} } } } 
                   ovo je za klasu "MuiFab-root" )
@@ -16,10 +16,10 @@ Deisgn beleske:
       -Palette collors:
             -U index.js overajdujem primary.main=,secodnary.main... tako definisem sve boje koje koristim.Ako neku boju nece da prepozna,definisi color="error.main".
             -Definisanje paleta za obicne elemente(ne materail UI comp).
-            -Definisanje div elemneta sa pallete: importujem useTheme zatim definisem u comp const theme=makeTheme().
-            -zatim <div style={{color:theme.pallete.primary.main}}.
+                  -Definisanje div elemneta sa pallete: importujem useTheme zatim definisem u comp const theme=makeTheme().
+                  -zatim <div style={{color:theme.pallete.primary.main}}.
             -Kako da definisem komponentu u createTheme sa palette ? 
-                  npr: MuiFab:{styleOverrides:{root: ({ theme }) => ({backgroundColor: theme.palette.error.main})}
+                  npr: MuiFab:{styleOverrides:{root: ({ theme }) => ({backgroundColor: theme.palette.error.main})}}
             
 PORTFOLIO BELESKE
       -Ako ne stavim za AppBar position='relativ necu videti elemente jer ce se nalaziti IZA AppBar.Mogu i ovde position sticky i dodam top:0
@@ -85,17 +85,13 @@ GAME BELESKE
       -kada konektujem mobilni u komp sa usb kablom, u mobilnom u settings /System&Updates/Developer options i ukljucim USB debugging.Moram da ostanem u tom folderu da se ne bi iskljucilo automatski.
       -u terminal u vsCode kucam ipconfig,kopiram ipv4 adress,umesto localhost:300,kopiram : '192.168.1.9:3000' i sada kada je fon povezan usb-om na komp,kopiram ovu adresu i mogu preko mobilnom.
       -Da zamenim boju svg ikonice otvorim taj svg fajl pomocu notepad i nadjem current color:'0092ff'
-
+      -Importovane funkcije sam rasporedio uz pomoc "single responsibility principle" koji je jedan od 5 koraka S.O.L.I.D design react-a.
 PLAN DALJI: 
-      -Dizajn stranice
-            Nastavi od palette collors,font style iz app si prebacio u index.js
-            -Kada si zavrsio skroz Design,pusti malo da slegne,zatim pogledaj nemanjinu i jos par stranica (sa tutoriala web develop design colors),zatim uporedi sa svojim      
-            -Kada udjem u photoDetail ne vidi se back arrow zbog navbar fixed,resi to.
+      -Dizajn stranice.
       Trazenje Posla:
             Posaljem motivaciono,cv i link github profila.
-
-                  Napravi Linked in,izmeni kako treba za programera.
-                  Kontaktiraj Likusu koju ti je poslao Ugljesa.
+                  Sredi Linked in
+                  Kontaktiraj Ljude.
                   Kontaktiraj Losmijevu pomoc.
                   Izmeni i trazi na  infsostudu ili slicnim stranicama posao kao React Programer i samo salji,iako pise iskusvo.
       Usput uci jos o reactu, gledaj klipove i nadogradi cv ako treba.kad zavrsis sve ovo.

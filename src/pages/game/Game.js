@@ -8,14 +8,14 @@ import moon from "../../assets/photos&images/moon.svg";
 import mountain from "../../assets/photos&images/mountains.svg";
 import sun from "../../assets/photos&images/sun.svg";
 import tree from "../../assets/photos&images/tree.svg";
+import { createBoard } from "../../functions/gameFunctions/createBoard";
+import { moveIntoSquareBelow } from "../../functions/gameFunctions/emptySquares";
 import {
   checkForColumnOfFour,
   checkForColumnOfThree,
   checkForRowOfFour,
   checkForRowOfThree,
-  createBoard,
-  moveIntoSquareBelow,
-} from "../../functions/functionsGame";
+} from "../../functions/gameFunctions/rowsAndColumnsFinder";
 import ScoreBoard from "./ScoreBoard";
 
 const Game = ({ wiDth }) => {

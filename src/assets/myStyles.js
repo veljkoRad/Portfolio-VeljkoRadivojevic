@@ -56,6 +56,15 @@ export const myStyles = {
     justifyContent: "center",
     margin: "0 auto 0 auto",
   },
+  mainBox: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  infoText: {
+    fontSize: "20px",
+    margin: "10px",
+  },
 
   //Game ends
 };
