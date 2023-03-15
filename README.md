@@ -1,12 +1,30 @@
-This project was made with React.<br>
-All photos from project are on npm Json server.To run that server type in terminal npm run server,or in Vs Code under "npm scripts" run the "server" button.
+# React Js portfolio project
 
-Tools that I used for this project:
+In this project I want to present my knowledge, acquired so far.
 
--Material UI i Material UI Icons<br>
--veryicon.com<br>
--Emailjs -for email template<br>
--ReactScroll<br>
--React Router<br>
--npm Json server<br>
--Axios<br>
+## Introduction
+
+The project consists of 3 pages:
+
+- My Portfolio
+- Photo Album
+- Puzzle Game
+
+## Instalation
+
+All photos from project are on npm Json server.To run that server type in terminal:
+
+```
+ npm run server
+
+```
+
+## Tools that I used for this project:
+
+- Material UI i Material UI Icons
+- veryicon.com
+- Emailjs -for email template
+- ReactScroll
+- React Router
+- npm Json server
+- Axio
