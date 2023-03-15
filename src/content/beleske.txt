@@ -9,7 +9,7 @@ Deisgn beleske
             -Kako da nadjem ime klase koje treba da definisem u createTheme?
                   -U browser u inspect kad stisnem componentu gledam u elements .
                   -Klikcem po drugim elementima iz te komponente sve dok ne nadem definisanu boju koju treba da zamenim.Gde je ta boja to je ta klasa.
-                  -Umesto root moze i npr:  MuiOutlinedInput-notchedOutline. Sve je isto samo umesto objeka root definisem notchedOutline:{color:'red'}.
+                  -Umesto root  moze i npr:  MuiOutlinedInput-notchedOutline. Sve je isto samo umesto objeka root definisem notchedOutline:{color:'red'}.
       -KAKO DEFINISEM INLINE I EXTERNAL STYLE I SX ILI STYLE?
             - style={{...sxStyles.mainCard,borderColor:'red}}.
       -Navikni se da searcujes sve sto ti treba u vs code.
