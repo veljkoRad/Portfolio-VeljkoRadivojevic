@@ -6,7 +6,6 @@ import {
   ListItemText,
 } from "@mui/material";
 import { Link } from "react-scroll";
-import { sxStyles } from "../../assets/myStyles";
 import { sidebarItems } from "../../data/dataItems";
 
 const active = {
