@@ -37,7 +37,7 @@ export const myStyles = {
     justifyContent: "space-around",
     paddingTop: "80px",
     paddingBottom: "30px",
-    height: "100%",
+    height: "100vh",
   },
   myGame: {
     width: "560px",

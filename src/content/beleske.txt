@@ -1,3 +1,6 @@
+Netlify-
+Da bi uspeo da napravi ,morao sam umesto npm "run build" da kucam " CI='' npm run build "
+
 Deisgn beleske
       -Prvo sam izabrao svoju primary color,zatim na stranici mycolor.space kada stavim tu primary boju.i predlozice mi izbor ostalih bojja
       -Odnos: 1.Primary 60% ekrana 2.Secondary 30% 3.Active(10%) dugmici i tako to.
