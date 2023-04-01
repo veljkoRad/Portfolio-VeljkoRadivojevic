@@ -18,14 +18,14 @@ const StyledPhotoCard = styled(Card)(() => ({
   },
 }));
 
-const Photos = ({ pic, width }) => {
+const Photos = ({ width, cutPic }) => {
   const photoProp = {
     margin: width < 900 ? "0 auto 0 auto" : "",
   };
 
   return (
     <>
-      {pic.map((item) => (
+      {cutPic.map((item) => (
         <Grid item xs={8} md={3} key={item.id} sx={photoProp}>
           <Link style={{ textDecoration: "none" }} to={`/api/${item.id}`}>
             <StyledPhotoCard>

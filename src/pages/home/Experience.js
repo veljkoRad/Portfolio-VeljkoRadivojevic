@@ -23,8 +23,8 @@ const Experience = ({ width }) => {
               Current skills
             </Typography>
           </Grid>
-          {iconsArr.map((arr) => (
-            <Grid item xs={4} sm={3} sx={{ margin: "10px 0 10px 0" }}>
+          {iconsArr.map((arr, id) => (
+            <Grid item key={id} xs={4} sm={3} sx={{ margin: "10px 0 10px 0" }}>
               <div style={iconsDiv}>
                 <Avatar>
                   <img src={arr.img} alt="" width="60%" />
@@ -39,8 +39,8 @@ const Experience = ({ width }) => {
               Sources of learning
             </Typography>
           </Grid>
-          {iconsArr2.map((item) => (
-            <Grid item xs={4} sm={3} sx={{ margin: "10px 0 10px 0" }}>
+          {iconsArr2.map((item, id) => (
+            <Grid item key={id} xs={4} sm={3} sx={{ margin: "10px 0 10px 0" }}>
               <div style={iconsDiv}>
                 <Avatar>
                   <img src={item.img} alt="" width="70%" />

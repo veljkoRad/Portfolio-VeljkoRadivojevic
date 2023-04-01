@@ -16,8 +16,9 @@ const menuStyle = {
 const DropMenu = ({ setNavBtn }) => {
   return (
     <div style={menuStyle}>
-      {breadcrumbList.map((item) => (
+      {breadcrumbList.map((item, id) => (
         <NavLink
+          key={id}
           onClick={() => setNavBtn(false)}
           to={item.location}
           style={({ isActive }) => {

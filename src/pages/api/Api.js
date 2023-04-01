@@ -12,9 +12,12 @@ import DefaultPhotos from "./DefaultPhotos";
 import Filters from "./Filters";
 import Photos from "./Photos";
 
+import photos from "../../data/photoItems.json";
+
 const Api = ({ width }) => {
   const [num, setNum] = useState(1);
   const [pic, setPic] = useState([]);
+  const [cutPic, setCutPic] = useState([]);
   const [hidePagination, setHidePagination] = useState(true);
 
   const theme = useTheme();
@@ -30,15 +33,21 @@ const Api = ({ width }) => {
     backgroundColor: theme.palette.primary.main,
   };
 
-  let api = `http://localhost:5000/photos?_page=${num}&_limit=8`;
+  //Get all objects from array start
+  let api =
+    "https://bright-bittersweet-nose.glitch.me/json-server-deploy-master/db.json";
   useEffect(() => {
-    axios
-      .get(api)
-      .then((res) => setPic(res.data))
-      .catch((err) =>
-        window.alert("Start server for images using npr server or yarn server.")
-      );
-  }, [num]);
+    axios.get(api).then((res) => setPic(res.data.photos));
+  }, []);
+  //Get all objects from array end
+  console.log(pic);
+  //Gett 8 objets from array start
+  useEffect(() => {
+    let first = num * 8 - 8;
+    let second = num * 8;
+    setCutPic(pic.slice(first, second));
+  }, [num, pic]);
+  //Gett 8 objets from array end
 
   return (
     <div style={main}>
@@ -76,17 +85,18 @@ const Api = ({ width }) => {
           <StyledGrid item xs={11}>
             <DefaultPhotos
               setHidePagination={setHidePagination}
-              setPic={setPic}
               setNum={setNum}
+              num={num}
               api={api}
+              setCutPic={setCutPic}
             />
           </StyledGrid>
         )}
         <StyledGrid item xs={11} md={2}>
           <Filters
-            setPic={setPic}
             setHidePagination={setHidePagination}
             width={width}
+            setCutPic={setCutPic}
           />
         </StyledGrid>
         <Grid
@@ -97,7 +107,7 @@ const Api = ({ width }) => {
           spacing={2}
           sx={{ margin: "0.7rem auto 0 auto" }}
         >
-          <Photos pic={pic} width={width} />
+          <Photos width={width} cutPic={cutPic} />
         </Grid>
       </Grid>
     </div>

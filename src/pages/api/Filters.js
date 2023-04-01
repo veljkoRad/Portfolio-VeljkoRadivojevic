@@ -3,14 +3,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { allMountains } from "../../data/dataItems";
 
-const Filters = ({ setPic, setHidePagination, width }) => {
+const Filters = ({ setHidePagination, width, setCutPic }) => {
   const theme = useTheme();
 
   //Filtering all photos start
-  const data = "http://localhost:5000/photos";
+  const data =
+    "https://bright-bittersweet-nose.glitch.me/json-server-deploy-master/db.json";
   const [filter, setFilter] = useState([]);
   useEffect(() => {
-    axios.get(data).then((res) => setFilter(res.data));
+    axios.get(data).then((res) => setFilter(res.data.photos));
   }, []);
   //Filtering all photos end
 
@@ -46,7 +47,7 @@ const Filters = ({ setPic, setHidePagination, width }) => {
           variant="extended"
           size="small"
           onClick={() => {
-            setPic(() => filter.filter((i) => i.mountain === item.name));
+            setCutPic(() => filter.filter((i) => i.mountain === item.name));
             setHidePagination(() => false);
           }}
         >

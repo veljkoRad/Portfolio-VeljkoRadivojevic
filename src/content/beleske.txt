@@ -100,6 +100,11 @@ PLAN DALJI:
       Usput uci jos o reactu, gledaj klipove i nadogradi cv ako treba.kad zavrsis sve ovo.
 
 
+      beleske posle povratka:
+      -uspeo sam u filteru da zamein pravi sajt za lazni.
+      -sad jos logiku sa slike u stranice (map.slice)
+
+
 
  
 

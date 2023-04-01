@@ -28,8 +28,9 @@ const Navbar = ({ width, navBtn, setNavBtn }) => {
           </Button>
         ) : (
           <Breadcrumbs separator="">
-            {breadcrumbList.map((item) => (
+            {breadcrumbList.map((item, id) => (
               <NavLink
+                key={id}
                 to={item.location}
                 style={({ isActive }) => {
                   return isActive
