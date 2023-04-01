@@ -14,9 +14,9 @@ import Photos from "./Photos";
 
 import photos from "../../data/photoItems.json";
 
-const Api = ({ width }) => {
+const Api = ({ width, pic, api }) => {
   const [num, setNum] = useState(1);
-  const [pic, setPic] = useState([]);
+
   const [cutPic, setCutPic] = useState([]);
   const [hidePagination, setHidePagination] = useState(true);
 
@@ -33,14 +33,6 @@ const Api = ({ width }) => {
     backgroundColor: theme.palette.primary.main,
   };
 
-  //Get all objects from array start
-  let api =
-    "https://bright-bittersweet-nose.glitch.me/json-server-deploy-master/db.json";
-  useEffect(() => {
-    axios.get(api).then((res) => setPic(res.data.photos));
-  }, []);
-  //Get all objects from array end
-  console.log(pic);
   //Gett 8 objets from array start
   useEffect(() => {
     let first = num * 8 - 8;

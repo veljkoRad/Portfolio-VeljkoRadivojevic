@@ -17,15 +17,16 @@ const cardPhoto = {
   maxHeight: "500px",
 };
 
-const PhotoDetail = ({ width }) => {
+const PhotoDetail = ({ width, pic }) => {
   const theme = useTheme();
-  const { id } = useParams();
-
+  const { userId } = useParams();
   const [data, setData] = useState([]);
-  let adress = `http://localhost:5000/photos/${id}`;
+
   useEffect(() => {
-    axios.get(adress).then((res) => setData(res.data));
+    setData(() => pic.find((item) => item.id == userId));
   }, []);
+
+  console.log(pic);
 
   return (
     <div
