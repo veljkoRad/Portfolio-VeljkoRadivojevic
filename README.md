@@ -10,14 +10,13 @@ The project consists of 3 pages:
 - Photo Album
 - Puzzle Game
 
-## Instalation
+-My whole Portfolio Project is also located globally on Netlify.com
 
-All photos from project are on npm Json server.To run that server type in terminal:
+> https://veljkorad.netlify.app/
 
-```
- npm run server
+-I used Glitch.com for my fake Json server,from which I collect data for Photo Album.
 
-```
+-Game can't start on touch devices.I used Drag and Drop method .
 
 ## Tools that I used for this project:
 
@@ -26,5 +25,4 @@ All photos from project are on npm Json server.To run that server type in termin
 - Emailjs -for email template
 - ReactScroll
 - React Router
-- npm Json server
-- Axio
+- Axios

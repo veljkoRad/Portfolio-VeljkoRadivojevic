@@ -12,10 +12,11 @@ import axios from "axios";
 function App() {
   const [width, setWidth] = useState(window.innerWidth);
   const [navBtn, setNavBtn] = useState(false);
-
   const [pic, setPic] = useState([]);
+
   let api =
     "https://bright-bittersweet-nose.glitch.me/json-server-deploy-master/db.json";
+
   useEffect(() => {
     axios.get(api).then((res) => setPic(res.data.photos));
   }, []);

@@ -37,15 +37,9 @@ export const myStyles = {
     justifyContent: "space-around",
     paddingTop: "80px",
     paddingBottom: "30px",
-    height: "100vh",
+    height: "100%",
   },
-  myGame: {
-    width: "560px",
-    height: "560px",
-    display: "flex",
-    flexWrap: "wrap",
-    margin: "0 auto 0 auto",
-  },
+
   scoreBox: {
     width: "130px",
     height: "70px",
@@ -60,8 +54,10 @@ export const myStyles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    margin: "0 auto 0 auto",
   },
   infoText: {
+    textAlign: "center",
     fontSize: "20px",
     margin: "10px",
   },

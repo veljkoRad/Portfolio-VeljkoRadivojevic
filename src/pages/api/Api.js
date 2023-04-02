@@ -6,13 +6,10 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import DefaultPhotos from "./DefaultPhotos";
 import Filters from "./Filters";
 import Photos from "./Photos";
-
-import photos from "../../data/photoItems.json";
 
 const Api = ({ width, pic, api }) => {
   const [num, setNum] = useState(1);
@@ -89,6 +86,7 @@ const Api = ({ width, pic, api }) => {
             setHidePagination={setHidePagination}
             width={width}
             setCutPic={setCutPic}
+            pic={pic}
           />
         </StyledGrid>
         <Grid

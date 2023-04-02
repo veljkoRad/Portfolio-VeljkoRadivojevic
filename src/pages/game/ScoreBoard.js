@@ -4,7 +4,7 @@ const ScoreBoard = ({ scoreDisplay, theme }) => {
   return (
     <div style={myStyles.mainBox}>
       <Typography sx={myStyles.infoText}>
-        Swap images to create set of 3 or 4 maching images
+        Swap images to create <br /> set of 3 or 4 maching images
       </Typography>
       <div
         style={{

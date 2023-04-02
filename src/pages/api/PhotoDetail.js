@@ -26,8 +26,6 @@ const PhotoDetail = ({ width, pic }) => {
     setData(() => pic.find((item) => item.id == userId));
   }, []);
 
-  console.log(pic);
-
   return (
     <div
       style={{

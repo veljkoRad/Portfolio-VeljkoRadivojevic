@@ -9,14 +9,24 @@ import {
 import { NavLink } from "react-router-dom";
 import { myStyles } from "../assets/myStyles";
 import { breadcrumbList } from "../data/dataItems";
+import { Link } from "react-scroll";
 
 const Navbar = ({ width, navBtn, setNavBtn }) => {
   return (
     <AppBar color="primary" position="fixed">
       <Toolbar>
-        <Typography variant="h6" color="secondary">
-          Veljko Radivojevic
-        </Typography>
+        <Link
+          smooth={true}
+          to="About"
+          duration={800}
+          offset={-110}
+          style={{ cursor: "pointer" }}
+        >
+          <Typography variant="h6" color="secondary">
+            Veljko Radivojevic
+          </Typography>
+        </Link>
+
         {width < 600 ? (
           <Button
             sx={{ marginLeft: "auto" }}
