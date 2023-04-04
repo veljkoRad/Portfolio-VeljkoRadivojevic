@@ -64,11 +64,11 @@ export const iconsArr = [
   { name: "Html", img: htmlIcon },
   { name: "Css", img: cssIcon },
   { name: "Javascript", img: jsIcon },
-  { name: "Node Js", img: nodeJsIcon },
+  { name: "React Js", img: reactIcon },
   { name: "Git", img: gitIcon },
   { name: "Material UI", img: materialIcon },
   { name: "Bootstrap", img: bootstrapIcon },
-  { name: "React Js", img: reactIcon },
+  { name: "Node Js", img: nodeJsIcon },
 ];
 export const iconsArr2 = [
   { name: "Youtube", img: youtubeIcon },
