@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import {
   Button,
   Card,
@@ -84,10 +84,10 @@ const Contact = ({ width }) => {
                   <GitHubIcon sx={linkIcons} />
                 </Link>
                 <Link
-                  href="https://www.instagram.com/rveljko92/"
+                  href="https://www.linkedin.com/in/veljko-radivojevic-77a825267/"
                   target="_blank"
                 >
-                  <InstagramIcon sx={linkIcons} />
+                  <LinkedInIcon sx={linkIcons} />
                 </Link>
               </div>
             </Grid>
