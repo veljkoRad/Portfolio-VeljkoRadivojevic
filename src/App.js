@@ -7,6 +7,7 @@ import Api from "./pages/api/Api";
 import PhotoDetail from "./pages/api/PhotoDetail";
 import Game from "./pages/game/Game";
 import Home from "./pages/home/Home";
+import Projects from "./pages/projects/Projects";
 import axios from "axios";
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <CssBaseline />
+        <CssBaseline sx={{ overflow: "hidden" }} />
         <Navbar width={width} navBtn={navBtn} setNavBtn={setNavBtn} />
         {navBtn ? (
           <div
@@ -61,6 +62,7 @@ function App() {
         )}
         <Routes>
           <Route path="/" element={<Home width={width} />}></Route>
+
           <Route
             path="/api"
             element={<Api width={width} pic={pic} api={api} />}
@@ -70,7 +72,9 @@ function App() {
             element={<PhotoDetail width={width} pic={pic} />}
           ></Route>
 
-          <Route path="/game" element={<Game wiDth={width} />}>
+          <Route path="/game" element={<Game wiDth={width} />}></Route>
+
+          <Route path="/projects" element={<Projects width={width} />}>
             {" "}
           </Route>
         </Routes>

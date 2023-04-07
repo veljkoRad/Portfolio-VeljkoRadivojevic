@@ -11,6 +11,21 @@ const theme = createTheme({
     info: { main: "#F1F1E6" },
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          "&::-webkit-scrollbar": {
+            width: 7,
+            backgroundColor: "#0A192F",
+          },
+
+          "&::-webkit-scrollbar-thumb": {
+            backgroundColor: "#F6BE3B",
+          },
+        },
+      },
+    },
+
     MuiAvatar: {
       styleOverrides: {
         root: ({ theme }) => ({

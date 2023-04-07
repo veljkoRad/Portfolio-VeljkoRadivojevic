@@ -20,6 +20,13 @@ import w3schoolsIcon from "../assets/photos&images/experienceImages/w3schools.sv
 import youtubeIcon from "../assets/photos&images/experienceImages/youtube.svg";
 //Experience icons end
 
+//Projects icons start
+import rimPic from "../assets/photos&images/projectsImages/rimPic.jpg";
+import scrollPic from "../assets/photos&images/projectsImages/scrollPic.jpg";
+import SWPic from "../assets/photos&images/projectsImages/SWPic.jpg";
+import taskPic from "../assets/photos&images/projectsImages/taskPic.jpg";
+//Projects icons end
+
 export const sidebarItems = [
   {
     id: 1,
@@ -82,4 +89,36 @@ export const breadcrumbList = [
   { name: "CV", location: "/" },
   { name: "Album", location: "/api" },
   { name: "Game", location: "/game" },
+  { name: "Projects", location: "/projects" },
+];
+
+export const projectsList = [
+  {
+    name: "R&M Wiki",
+    info: "This React Js project is wikipedia of Rick and Morty cartoon.App collects data from other server using Rest Api. ",
+    image: rimPic,
+    location: "https://github.com/veljkoRad/Rick_Morty_Wikipedia",
+    id: 0,
+  },
+  {
+    name: "Taskbar App",
+    info: "This is React Js project,react Router included. App fetch data(Tasks) from fake Json server ",
+    image: taskPic,
+    location: "https://github.com/veljkoRad/React_Taskbar_project",
+    id: 1,
+  },
+  {
+    name: "Scroll Page",
+    info: "This is responisve design scroll page,created with Html/Css/JavaScript",
+    image: scrollPic,
+    location: "https://github.com/veljkoRad/Responsive-Design-Scroll_Site",
+    id: 2,
+  },
+  {
+    name: "Star Wars page",
+    info: "This is simple responsive design Html/Css/JavaScript page,my first project",
+    image: SWPic,
+    location: "https://github.com/veljkoRad/StarWas_Responsive_Page",
+    id: 3,
+  },
 ];

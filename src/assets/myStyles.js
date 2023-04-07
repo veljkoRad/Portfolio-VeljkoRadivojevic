@@ -35,8 +35,8 @@ export const myStyles = {
   mainDiv: {
     display: "flex",
     justifyContent: "space-around",
-    paddingTop: "80px",
-    paddingBottom: "30px",
+    paddingTop: "110px",
+    paddingBottom: "260px",
     height: "100%",
   },
 
