@@ -29,16 +29,11 @@ const Photos = ({ width, cutPic }) => {
         <Grid item xs={8} md={3} key={item.id} sx={photoProp}>
           <Link style={{ textDecoration: "none" }} to={`/api/${item.id}`}>
             <StyledPhotoCard>
-              <CardMedia
-                component="img"
-                height="250px"
-                sx={{ width: "auto" }}
-                image={item.image}
-              />
+              <CardMedia component="img" height="250px" image={item.image} />
               <CardContent>
                 <Typography
                   align="center"
-                  color="primary"
+                  color="primary.main"
                   sx={{ fontSize: "25px" }}
                   gutterBottom
                 >
