@@ -19,7 +19,7 @@ const Experience = ({ width }) => {
       <CardContent>
         <Grid container sx={{ height: "100%" }}>
           <Grid item xs={12} sx={{ textAlign: "center", marginBottom: "20px" }}>
-            <Typography color="error" sx={{ opacity: 0.9 }}>
+            <Typography color="info.main" sx={{ opacity: 0.9 }}>
               Current skills
             </Typography>
           </Grid>
@@ -35,7 +35,7 @@ const Experience = ({ width }) => {
             </Grid>
           ))}
           <Grid item xs={12} sx={{ textAlign: "center", marginBottom: "20px" }}>
-            <Typography color="error" sx={{ opacity: 0.9 }}>
+            <Typography color="info.main" sx={{ opacity: 0.9 }}>
               Sources of learning
             </Typography>
           </Grid>

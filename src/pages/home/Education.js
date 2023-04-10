@@ -16,7 +16,7 @@ const Education = ({ width }) => {
   return (
     <Card id="education" name="Education">
       <CardContent>
-        <ul style={{ color: theme.palette.error.main, padding: "-1.2rem" }}>
+        <ul style={{ color: theme.palette.info.main, padding: "-1.2rem" }}>
           <li style={{ marginBottom: "1.2rem" }}>
             <EduTyp1>“Polytechnic" - high school for new technologies</EduTyp1>
             <EduTyp2>2007-2011,Belgrade</EduTyp2>
@@ -34,9 +34,9 @@ const Education = ({ width }) => {
         <Typography
           sx={{ fontSize: width < 430 ? "1rem" : "1.4rem", opacity: 0.75 }}
         >
-          My math skills, taken from college help me a lot through learning web
-          development.<br></br>As Cnc programmer I learned about programing
-          basics.
+          My first experience with programming was in college. Now I have
+          continued ,more than one year, with the help of an experienced mentor
+          and online courses.
         </Typography>
       </CardContent>
     </Card>

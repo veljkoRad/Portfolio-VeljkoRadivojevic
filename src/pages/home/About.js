@@ -1,4 +1,11 @@
-import { Avatar, Card, CardContent, Typography, styled } from "@mui/material";
+import {
+  Avatar,
+  Button,
+  Card,
+  CardContent,
+  Typography,
+  styled,
+} from "@mui/material";
 import profile from "../../assets/photos&images/profile.jpg";
 
 const StyledAvatar = styled(Avatar)(() => ({
@@ -7,6 +14,10 @@ const StyledAvatar = styled(Avatar)(() => ({
   marginRight: "20%",
   marginLeft: "auto",
   border: "2px solid #F6BE3B",
+}));
+const StyledButton = styled(Button)(() => ({
+  width: "40%",
+  margin: "0 auto 0 auto",
 }));
 
 const About = ({ width }) => {
@@ -25,11 +36,19 @@ const About = ({ width }) => {
           Born 1992 in Belegrade.
         </StyledTypography>
         <StyledTypography sx={{ opacity: 0.7 }}>
-          Working with pc is my passion since I was boy.
+          I'm a self-taught developer hungry for knowledge and eager to study at
+          a rapid pace.
         </StyledTypography>
-        <StyledTypography sx={{ opacity: 0.6 }}>
-          Now, I'm enjoying on my road to become great Web Developer.
-        </StyledTypography>
+        <StyledButton
+          href="/VeljkoRadivojevicCV.pdf"
+          target="_blank"
+          variant="outlined"
+          color="error"
+          size="small"
+          width="30%"
+        >
+          <StyledTypography sx={{ opacity: 0.6 }}>My Resume</StyledTypography>
+        </StyledButton>
       </CardContent>
     </Card>
   );
