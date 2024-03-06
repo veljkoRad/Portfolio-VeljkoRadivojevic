@@ -11,7 +11,7 @@ import profile from "../../assets/photos&images/profile.jpg";
 const StyledAvatar = styled(Avatar)(() => ({
   width: 170,
   height: 170,
-  marginRight: "20%",
+  marginRight: "auto",
   marginLeft: "auto",
   border: "2px solid #F6BE3B",
 }));
