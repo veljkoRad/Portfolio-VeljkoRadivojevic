@@ -33,21 +33,33 @@ const About = ({ width }) => {
           Hello, I'm Veljko{" "}
         </StyledTypography>
         <StyledTypography sx={{ opacity: 0.8 }}>
-          Born 1992 in Belegrade.
+          Passionate frontend developer with one year of experience in PPC marketing.
         </StyledTypography>
         <StyledTypography sx={{ opacity: 0.7 }}>
-          I'm a self-taught developer hungry for knowledge and eager to study at
-          a rapid pace.
+          Enthusiastic about coding, continuous learning, and problem-solving with a proactive mindset.
         </StyledTypography>
+        <StyledTypography sx={{ opacity: 0.6 }}>
+          Self-taught and always eager to expand my knowledge.
+        </StyledTypography>
+
         <StyledButton
           href="/VeljkoRadivojevicCV.pdf"
           target="_blank"
           variant="outlined"
           color="error"
           size="small"
-          width="30%"
+          sx={{
+            borderWidth: '3px',
+            borderRadius: '5px',
+            opacity: 0.6, textTransform: 'uppercase',
+            fontSize: 24, '@media (max-width: 500px)': {
+              fontSize: '18px'
+            }, '@media (max-width: 400px)': {
+              fontSize: '16px'
+            }, width: 'auto'
+          }}
         >
-          <StyledTypography sx={{ opacity: 0.6 }}>My Resume</StyledTypography>
+          <StyledTypography>Portfolio</StyledTypography>
         </StyledButton>
       </CardContent>
     </Card>
